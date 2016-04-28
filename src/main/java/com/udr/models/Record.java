@@ -2,6 +2,7 @@ package com.udr.models;
 
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name="records")
@@ -19,8 +20,8 @@ public class Record {
 	@Column(name="artist", length=50, nullable=true)
 	private String artist;
 
-	@Column(name="year_of_release", nullable=true)
-	private int year_of_release;
+	@Column(name="date_of_release")
+	private Date date_of_release;
 
 	@Column(name="label", nullable=true)
 	private String label;
@@ -52,12 +53,12 @@ public class Record {
 		this.artist = artist;
 	}
 
-	public int getYear_of_release() {
-		return year_of_release;
+	public Date getdate_of_release() {
+		return date_of_release;
 	}
 
-	public void setYear_of_release(int year_of_release) {
-		this.year_of_release = year_of_release;
+	public void setdate_of_release(Date date_of_release) {
+		this.date_of_release = date_of_release;
 	}
 
 	public String getLabel() {
