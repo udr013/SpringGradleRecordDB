@@ -1,0 +1,26 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Spring and thymeleaf</title>
+</head>
+<body>
+<h1>Here we go</h1>
+
+
+<form th:object="${record}" th:action="@{/record/save}" action="#" method="post">
+    <input type="text" th:field="*{album}" class="form-control" placeholder="album"/>
+    <br/>
+    <input type="text" th:field="*{artist}" class="form-control" placeholder="artist"/>
+    <br/>
+    <input type="number " th:field="*{year_of_release}" class="form-control" placeholder="year"/>
+    <br/>
+    <input type="text" th:field="*{label}" class="form-control" placeholder="label"/>
+    <br/>
+    <input type="number" step="0.01" th:field="*{price}" class="form-control" placeholder="price"/>
+    <br/>
+    <input type="submit" class="btn btn-danger pull-right" value="Save"/>
+</form>
+
+</body>
+</html>
