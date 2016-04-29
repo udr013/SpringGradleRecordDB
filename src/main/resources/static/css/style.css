@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Aerosol;
+    src: url('http://www.fontsaddict.com/fontface/aerosol.ttf')format('truetype');
+}
+
+h1{
+    color: #815a24;
+    font-size: 2em;
+    font-family: Aerosol;
+}
+
+h4{
+    color: #888888
+}
+header{
+    align:center;
+    width: 100%;
+    background-color: #141414;
+}
+
+body{
+    color:#ffffff;
+    background-color: #303030;
+}
+
+img{
+    align: center;
+}
+input{
+    margin: 10px;
+}
+
+img{
+    width: 25%;
+}
