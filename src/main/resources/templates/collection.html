@@ -21,7 +21,7 @@
         </thead>
         <tbody>
         <tr th:if="${#lists.isEmpty(allRecords)}" class="btn-warning">
-            <td colspan="5" align="center">No Employee Registered Yet!!!</td>
+            <td colspan="5" align="center">No Records in your collection yet!!!</td>
         </tr>
         <tr th:each="record : ${allRecords}">
             <td th:text="${record.artist}"></td>
@@ -30,8 +30,8 @@
             <td th:text="${record.label}"></td>
             <td th:text="${record.price}"></td>
             <td align="center">
-                <a th:href="@{/record/edit/{id}(id=${record.id})}"><span class="glyphicon glyphicon-edit"></span></a> &nbsp; &nbsp;
-                <a th:href="@{/record/delete/{id}(id=${record.id})}"><span class="glyphicon glyphicon-trash"></span></a>
+                <a th:href="@{/record/edit/{id}(id=${record.id})}"><span></span></a> &nbsp; &nbsp;
+                <a th:href="@{/record/delete/{id}(id=${record.id})}"><span></span></a>
             </td>
         </tr>
 
