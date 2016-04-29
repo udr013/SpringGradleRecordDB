@@ -7,21 +7,24 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
-<h3>Collection overview:</h3>
-<div class="panel-body">
+
+<div class="database_table" align="center">
+    <h2  class="overviewTitle">Collection overview:</h2>
+
     <table class="table table-bordered">
         <thead>
         <tr class="btn-success">
             <th>Artist</th>
             <th>Album</th>
-            <th>Date of Release</th>
+            <th>Year</th>
             <th>Label</th>
             <th>Price</th>
         </tr>
+
         </thead>
         <tbody>
         <tr th:if="${#lists.isEmpty(allRecords)}" class="btn-warning">
-            <td colspan="5" align="center">No Records in your collection yet!!!</td>
+            <td colspan="6" align="center">No Records in your collection yet!!!</td>
         </tr>
         <tr th:each="record : ${allRecords}">
             <td th:text="${record.artist}"></td>

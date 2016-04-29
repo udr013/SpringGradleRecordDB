@@ -16,6 +16,15 @@ h2{
     font-family: Aerosol;
 }
 
+th{
+    font-family: Aerosol;
+    font-size: 1.5em;
+}
+
+#overviewTitle{
+    font-size: 2em;
+}
+
 #pageheader{
     background-color: #141414;
 
