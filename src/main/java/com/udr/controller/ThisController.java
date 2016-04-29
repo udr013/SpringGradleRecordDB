@@ -36,6 +36,13 @@ public class ThisController {
 
     }
 
+    @RequestMapping("/collection")
+    public String viewCollection(Model model) {
+        // do stuff
+        //model.addAttribute("classActiveSettings","active");
+        return "collection";
+    }
+
     @RequestMapping(value = {"/record/save"}, method = RequestMethod.POST)
     public String saveRecord(@ModelAttribute("record") Record record) {
 

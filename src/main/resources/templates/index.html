@@ -1,38 +1,37 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet"  th:href="@{css/style.css}"/>
+<link rel="stylesheet" th:href="@{css/style.css}"/>
 <head>
 
     <title>Record Collector</title>
 </head>
 <body>
-<header align="center">
-<h1>Your Record Collection Database</h1>
-    <img  th:src="@{images/records.jpg}" alt="nice record image"/>
-<h4>Create a database of all your precious vinyl records</h4>
+<div th:replace="fragments/header :: header">
+</div>
 
-    </header>
+
+<br/>
 
 <ul>
-<form th:object="${record}" th:action="@{/record/save}" action="#" method="post">
-    <label>Artist:&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-    <input type="text" th:field="*{artist}" class="form-control" placeholder="artist"/>
-    <br/>
-    <label>Album:&emsp;&emsp;&emsp;&emsp;</label>
-    <input type="text" th:field="*{album}" class="form-control" placeholder="album"/>
-    <br/>
-    <label>Date of release:&emsp;</label>
-    <input type="date" th:field="*{date_of_release}" class="form-control" placeholder="year"/>
-    <br/>
-    <label>Record Company:</label>
-    <input type="text" th:field="*{label}" class="form-control" placeholder="label"/>
-    <br/>
-    <label>Price:&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-    <input type="number" step="0.01" th:field="*{price}" class="form-control" placeholder="price"/>
-    <br/>
-    <input type="submit" class="btn btn-danger pull-right" value="Save"/>
-</form>
-    </ul>
+    <form th:object="${record}" th:action="@{/record/save}" action="#" method="post">
+        <label>Artist:&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+        <input type="text" th:field="*{artist}" class="form-control" placeholder="artist"/>
+        <br/>
+        <label>Album:&emsp;&emsp;&emsp;&emsp;</label>
+        <input type="text" th:field="*{album}" class="form-control" placeholder="album"/>
+        <br/>
+        <label>Date of release:&emsp;</label>
+        <input type="date" th:field="*{date_of_release}" class="form-control" placeholder="year"/>
+        <br/>
+        <label>Record Company:</label>
+        <input type="text" th:field="*{label}" class="form-control" placeholder="label"/>
+        <br/>
+        <label>Price:&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+        <input type="number" step="0.01" th:field="*{price}" class="form-control" placeholder="price"/>
+        <br/>
+        <input type="submit" class="btn btn-danger pull-right" value="Save"/>
+    </form>
+</ul>
 
 </body>
 </html>

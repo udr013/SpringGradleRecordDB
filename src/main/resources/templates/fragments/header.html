@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div id="pageheader" th:fragment="header">
+    <header th:align="center">
+
+        <h1><img th:src="@{images/records.jpg}" alt="nice record image"/>Your Record Collection Database
+            <br/>
+            <h3>Create a database of all your precious vinyl records</h3>
+        </h1>
+    </header>
+    <br/>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#" th:href="@{/}">Update</a></li>
+            <li><a href="#" th:href="@{/collection}">Collection</a></li>
+            <li><a href="/about"> About</a></li>
+            <li><a href="/contact"> Contact</a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

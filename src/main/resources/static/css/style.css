@@ -1,21 +1,26 @@
 @font-face {
     font-family: Aerosol;
-    src: url('http://www.fontsaddict.com/fontface/aerosol.ttf')format('truetype');
+    src: url('../fonts/Aerosol.ttf')format('truetype');
 }
 
 h1{
     color: #815a24;
-    font-size: 2em;
+    font-size: 60px;
     font-family: Aerosol;
 }
 
-h4{
-    color: #888888
+h3{
+    color: #c7c7c7;
+    font-family: Aerosol;
+}
+
+#pageheader{
+    background-color: #141414;
+
 }
 header{
     align:center;
-    width: 100%;
-    background-color: #141414;
+
 }
 
 body{
@@ -23,13 +28,36 @@ body{
     background-color: #303030;
 }
 
-img{
-    align: center;
-}
+
 input{
     margin: 10px;
 }
 
-img{
-    width: 25%;
+h1 img{
+    float: left;
+    margin:10px 10px;
+    /*<!--width: 25%;-->*/
+}
+#navbar ul li{
+    display: inline-block;
+    padding: 2px 2%;
+}
+
+#navbar ul li a{
+    text-decoration: none;/*removes the underlining from the link*/
+    color: #888888;
+    font-size: 1.5em;
+}
+
+#navbar ul li a:hover{
+    background: #242323;
+    padding: 2px 2%;
+}
+
+#navbar{
+    background-color: #111111;
+
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
 }
