@@ -6,10 +6,12 @@
 h1{
     color: #815a24;
     font-size: 60px;
+    text-align: center;
     font-family: Aerosol;
 }
 
-h3{
+h2{
+    text-align: center;
     color: #c7c7c7;
     font-family: Aerosol;
 }
@@ -19,7 +21,7 @@ h3{
 
 }
 header{
-    align:center;
+
 
 }
 
