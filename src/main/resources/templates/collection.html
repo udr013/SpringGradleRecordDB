@@ -31,7 +31,7 @@
             <td th:text="${record.album}"></td>
             <td th:text="${record.getdate_of_release()}"></td>
             <td th:text="${record.label}"></td>
-            <td th:text="${record.price}"></td>
+            <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td><!-- Set minimum integer digits and (exact) decimal digits-->
             <td align="center">
                 <a th:href="@{/record/edit/{id}(id=${record.id})}"><span></span></a> &nbsp; &nbsp;
                 <a th:href="@{/record/delete/{id}(id=${record.id})}"><span></span></a>
