@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 @Controller
 @ComponentScan
-public class ThisController {
+public class WebController {
 
     @Autowired
     RecordServiceInterface recordServiceInterface;
