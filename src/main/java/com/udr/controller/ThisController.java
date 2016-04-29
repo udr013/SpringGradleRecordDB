@@ -39,7 +39,7 @@ public class ThisController {
     @RequestMapping("/collection")
     public String viewCollection(Model model) {
         model.addAttribute("allRecords", (ArrayList<Record>)recordServiceInterface.getAllRecords());
-        //model.addAttribute("classActiveSettings","active");
+
         return "collection";
     }
 

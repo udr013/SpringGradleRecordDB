@@ -7,9 +7,37 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
-<ul><title>Collection overview:</title>
+<h3>Collection overview:</h3>
+<div class="panel-body">
+    <table class="table table-bordered">
+        <thead>
+        <tr class="btn-success">
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Date of Release</th>
+            <th>Label</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${#lists.isEmpty(allRecords)}" class="btn-warning">
+            <td colspan="5" align="center">No Employee Registered Yet!!!</td>
+        </tr>
+        <tr th:each="record : ${allRecords}">
+            <td th:text="${record.artist}"></td>
+            <td th:text="${record.album}"></td>
+            <td th:text="${record.getdate_of_release()}"></td>
+            <td th:text="${record.label}"></td>
+            <td th:text="${record.price}"></td>
+            <td align="center">
+                <a th:href="@{/record/edit/{id}(id=${record.id})}"><span class="glyphicon glyphicon-edit"></span></a> &nbsp; &nbsp;
+                <a th:href="@{/record/delete/{id}(id=${record.id})}"><span class="glyphicon glyphicon-trash"></span></a>
+            </td>
+        </tr>
 
-</ul>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
