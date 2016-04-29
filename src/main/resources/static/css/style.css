@@ -10,6 +10,10 @@ h1{
     font-family: Aerosol;
 }
 
+body{
+    margin: 0px;
+}
+
 h2{
     text-align: center;
     color: #c7c7c7;
@@ -41,8 +45,14 @@ th{
 }
 
 footer a{
+    color:#815a24;
+    text-decoration: none;
     margin-left: 10px;
     font-stretch: ultra-expanded;
+}
+
+footer span{
+    color:#888888;
 }
 
 header{
@@ -59,11 +69,16 @@ input{
     margin: 10px;
 }
 
-h1 img{
+header h1{
+    margin:0px;
+    padding-top: 10px;
+}
+header img{
     float: left;
-    margin:10px 10px;
+    margin:30px 10px;
     /*<!--width: 25%;-->*/
 }
+
 #navbar ul li{
     display: inline-block;
     padding: 2px 2%;
