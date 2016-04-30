@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<table id="table" th:fragment="table">
+    <tr class="btn-success">
+        <th id="artist">Artist</th>
+        <th id="album">Album</th>
+        <th id="year">Year</th>
+        <th id="label">Label</th>
+        <th id="price">Price</th>
+    </tr>
+
+
+    <tbody>
+    <tr th:if="${#lists.isEmpty(allRecords)}" class="btn-warning">
+        <td colspan="5" align="center">No Records in your collection yet!!!</td>
+    </tr>
+    <tr th:each="record : ${allRecords}">
+        <td th:text="${record.artist}"></td>
+        <td th:text="${record.album}"></td>
+        <td th:text="${record.getdate_of_release()}"></td>
+        <td th:text="${record.label}"></td>
+        <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td>
+        <!-- Set minimum integer digits and (exact) decimal digits-->
+        <td>
+            <a th:href="@{/record/delete/{id}(id=${record.id})}"><span>delete</span></a>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>
