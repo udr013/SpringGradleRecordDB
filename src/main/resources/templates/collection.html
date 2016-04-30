@@ -46,10 +46,9 @@
             <td th:text="${record.label}"></td>
             <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td>
             <!-- Set minimum integer digits and (exact) decimal digits-->
-            <!--td>
-                <a th:href="@{/record/edit/{id}(id=${record.id})}"><span>edit</span></a> &nbsp; &nbsp;
+            <td>
                 <a th:href="@{/record/delete/{id}(id=${record.id})}"><span>delete</span></a>
-            </td-->
+            </td>
         </tr>
 
         </tbody>

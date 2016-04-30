@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -49,4 +50,23 @@ public class WebController {
        recordServiceInterface.saveRecord(record);
 
         return "redirect:/collection";
-}}
+    }
+    @RequestMapping(value = {"/record/delete/{id}"}, method = RequestMethod.GET)
+    public String deleteRecord(@PathVariable("id") Integer  id) {
+        System.out.println("we have id"+id);
+        recordServiceInterface.deleteRecord(id);
+
+        return "redirect:/collection";
+    }
+
+    @RequestMapping("/about")
+    public String viewAbout(){
+        return "about";
+    }
+
+    @RequestMapping("/contact")
+    public String viewContact(){
+        return "contact";
+    }
+
+}

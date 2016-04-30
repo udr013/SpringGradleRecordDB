@@ -29,7 +29,7 @@ public class RecordServiceImplementation implements RecordServiceInterface {
 	}
 
 	@Override
-	public Boolean deleteTecord(Integer id) {
+	public Boolean deleteRecord(Integer id) {
 
 		Record temp = recordRepository.findOne(id);
 		if(temp!=null){
