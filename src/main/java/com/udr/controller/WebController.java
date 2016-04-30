@@ -38,6 +38,7 @@ public class WebController {
 
     @RequestMapping("/collection")
     public String viewCollection(Model model) {
+        model.addAttribute("record", new Record());
         model.addAttribute("allRecords", (ArrayList<Record>)recordServiceInterface.getAllRecords());
 
         return "collection";
@@ -45,8 +46,7 @@ public class WebController {
 
     @RequestMapping(value = {"/record/save"}, method = RequestMethod.POST)
     public String saveRecord(@ModelAttribute("record") Record record) {
+       recordServiceInterface.saveRecord(record);
 
-        recordServiceInterface.saveRecord(record);
-
-        return "redirect:/startpage";
+        return "redirect:/collection";
 }}

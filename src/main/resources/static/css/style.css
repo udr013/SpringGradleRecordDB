@@ -14,6 +14,26 @@ body{
     margin: 0px;
 }
 
+#col-form{
+    width: 90%;
+}
+
+#artist #label{
+    width: 15%;
+}
+
+#album{
+    width: 30%;
+}
+
+#year #price{
+    width: 5%;
+}
+table{
+    width: 77%;
+    align-content: center;
+}
+
 h2{
     text-align: center;
     color: #c7c7c7;
@@ -81,6 +101,8 @@ header h2{
 header img{
     float: left;
     margin:20px 30px; ;
+    border: 4px outset #815a24;
+
     /*<!--width: 25%;-->*/
 }
 

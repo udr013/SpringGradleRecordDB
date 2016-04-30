@@ -9,33 +9,47 @@
 <div th:replace="fragments/header :: header"></div>
 
 <div class="database_table" align="center">
-    <h2  class="overviewTitle">Collection overview:</h2>
+    <h2 class="overviewTitle">Collection overview:</h2>
 
+
+    <form id="col-form" th:object="${record}" th:action="@{/record/save}" action="#" method="post">
+        <input type="text" th:field="*{artist}" class="form-control" placeholder="artist"/>
+
+        <input type="text" th:field="*{album}" class="form-control" placeholder="album"/>
+
+        <input type="date" th:field="*{date_of_release}" class="form-control" placeholder="year"/>
+
+        <input type="text" th:field="*{label}" class="form-control" placeholder="label"/>
+
+        <input type="number" step="0.01" th:field="*{price}" class="form-control" placeholder="price"/>
+
+        <input type="submit" class="btn btn-danger pull-right" value="Save"/>
+    </form>
     <table class="table table-bordered">
-        <thead>
         <tr class="btn-success">
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Year</th>
-            <th>Label</th>
-            <th>Price</th>
+            <th id="artist">Artist</th>
+            <th id="album">Album</th>
+            <th id="year">Year</th>
+            <th id="label">Label</th>
+            <th id="price">Price</th>
         </tr>
 
-        </thead>
+
         <tbody>
         <tr th:if="${#lists.isEmpty(allRecords)}" class="btn-warning">
-            <td colspan="6" align="center">No Records in your collection yet!!!</td>
+            <td colspan="5" align="center">No Records in your collection yet!!!</td>
         </tr>
         <tr th:each="record : ${allRecords}">
             <td th:text="${record.artist}"></td>
             <td th:text="${record.album}"></td>
             <td th:text="${record.getdate_of_release()}"></td>
             <td th:text="${record.label}"></td>
-            <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td><!-- Set minimum integer digits and (exact) decimal digits-->
-            <td align="center">
-                <a th:href="@{/record/edit/{id}(id=${record.id})}"><span></span></a> &nbsp; &nbsp;
-                <a th:href="@{/record/delete/{id}(id=${record.id})}"><span></span></a>
-            </td>
+            <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td>
+            <!-- Set minimum integer digits and (exact) decimal digits-->
+            <!--td>
+                <a th:href="@{/record/edit/{id}(id=${record.id})}"><span>edit</span></a> &nbsp; &nbsp;
+                <a th:href="@{/record/delete/{id}(id=${record.id})}"><span>delete</span></a>
+            </td-->
         </tr>
 
         </tbody>
