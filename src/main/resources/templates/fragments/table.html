@@ -9,6 +9,7 @@
         <th id="album">Album</th>
         <th id="year">Year</th>
         <th id="label">Label</th>
+        <th id="format">Format</th>
         <th id="price">Price</th>
     </tr>
 
@@ -22,10 +23,12 @@
         <td th:text="${record.album}"></td>
         <td th:text="${record.getdate_of_release()}"></td>
         <td th:text="${record.label}"></td>
-        <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td>
+        <td th:text="${record.format}"></td>
         <!-- Set minimum integer digits and (exact) decimal digits-->
+        <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td>
         <td>
-            <a th:href="@{/record/delete/{id}(id=${record.id})}"><span>delete</span></a>
+            <a th:href="@{/delete/{id}(id=${record.id})}"><span>delete</span></a>
+            <a th:href="@{/update/{id}(id=${record.id})}"><span>update</span></a>
         </td>
     </tr>
 

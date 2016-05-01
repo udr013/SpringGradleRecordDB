@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{css/style.css}"/>
+<head>
+    <link rel="shortcut icon" th:href="@{images/recordworld.ico}"/>
+    <title>The Record Collector</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<div class="database_table" align="center">
+    <h2 class="overviewTitle">Collection overview:</h2>
+
+
+    <form id="updateForm" th:object="${editRecord}" th:action="@{/update}" action="#" method="post">
+        <input type="hidden" th:field="*{id}"/>
+
+        <input type="text" th:field="*{artist}"/>
+
+        <input type="text" th:field="*{album}" laceholder="album"/>
+
+        <input type="date" th:field="*{date_of_release}"  placeholder="year"/>
+
+        <input type="text" th:field="*{label}"  placeholder="label"/>
+        <!--select type="text" th:value="*{format}" th:field="*{format}" >
+            <option name="select" th:value="*{LP}">LP</option>
+            <option name="select" th:value="*{2LP}">2LP</option>
+            <option name="select" th:value="*{3LP}">3LP</option>
+            <option name="select" th:value="*{12}">12"</option>
+            <option name="select" th:value="*{10}">10"</option>
+            <option name="select" th:value="*{7}">7"</option>
+        </select-->
+
+        <input type="number" step="0.01" th:field="*{price}" placeholder="price"/>
+
+        <input type="submit" class="btn btn-danger pull-right" value="Save"/>
+    </form>
+    <table th:replace="fragments/table :: table">
+    </table>
+</div>
+<footer>
+    <div th:replace="fragments/footer :: footer">
+
+    </div>
+</footer>
+
+</body>
+</html>

@@ -28,10 +28,8 @@ public class WebController {
 //        this.recordServiceInterface = recordServiceInterface;
 //    }
 
-    @RequestMapping(value = {"/","/startpage"}, method = RequestMethod.GET)
-    public String startPage(Model model){
-        model.addAttribute("record", new Record());
-        model.addAttribute("allRecords", (ArrayList<Record>)recordServiceInterface.getAllRecords());
+    @RequestMapping("/")
+    public String startPage(){
 
         return "index";
 
@@ -51,10 +49,27 @@ public class WebController {
 
         return "redirect:/collection";
     }
-    @RequestMapping(value = {"/record/delete/{id}"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/delete/{id}"}, method = RequestMethod.GET)
     public String deleteRecord(@PathVariable("id") Integer  id) {
         System.out.println("we have id"+id);
         recordServiceInterface.deleteRecord(id);
+
+        return "redirect:/collection";
+    }
+
+    @RequestMapping(value = {"/update/{id}"}, method = RequestMethod.GET)
+    public String editRecord(@PathVariable("id") Integer  id,Model model) {
+
+        System.out.println("we have id"+id);
+        Record editRecord= recordServiceInterface.findRecord(id);
+        model.addAttribute("editRecord", editRecord);
+        return "update";
+    }
+
+    @RequestMapping(value = {"/update/"}, method = RequestMethod.POST)
+    public String updateRecord(@ModelAttribute("editRecord") Record editRecord){
+        System.out.println("we have editRecord"+editRecord);
+        //recordServiceInterface.editRecord(editRecord);
 
         return "redirect:/collection";
     }

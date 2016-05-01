@@ -26,6 +26,17 @@ public class Record {
 	@Column(name="label", nullable=true)
 	private String label;
 
+	public String getFormat() {
+		return format;
+	}
+
+	public void setFormat(String format) {
+		this.format = format;
+	}
+
+	@Column(name="format", nullable=true)
+	private String format;
+
 	@Column(name="price", nullable=true)
 	private double price;
 
@@ -75,5 +86,14 @@ public class Record {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "Record{" +
+				"id=" + id +
+				", artist='" + artist + '\'' +
+				", album='" + album + '\'' +
+				'}';
 	}
 }
