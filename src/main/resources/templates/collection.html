@@ -1,6 +1,8 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
 <link rel="stylesheet" th:href="@{css/style.css}"/>
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css}"/>
+
 <head>
     <link rel="shortcut icon" th:href="@{images/recordworld.ico}"/>
     <title>The Record Collector</title>
@@ -28,13 +30,12 @@
             <option name="select" value="10">10"</option>
             <option name="select" value="7">7"</option>
         </select>
-
         <input type="number" step="0.01" th:field="*{price}" class="form-control" placeholder="price"/>
-
         <input type="submit" class="btn btn-danger pull-right" value="Save"/>
     </form>
     <table th:replace="fragments/table :: table">
     </table>
+
 </div>
 <footer>
     <div th:replace="fragments/footer :: footer">

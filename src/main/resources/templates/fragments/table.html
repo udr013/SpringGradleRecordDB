@@ -1,6 +1,7 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
 <head>
+
 </head>
 <body>
 <table id="table" th:fragment="table">
@@ -27,8 +28,8 @@
         <!-- Set minimum integer digits and (exact) decimal digits-->
         <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td>
         <td>
-            <a th:href="@{/delete/{id}(id=${record.id})}"><span>delete</span></a>
-            <a th:href="@{/update/{id}(id=${record.id})}"><span>update</span></a>
+            <a th:href="@{/delete/{id}(id=${record.id})}"><span><i class="fa fa-close fa-lg" aria-hidden="true"></i>&emsp;</span></a>
+            <a th:href="@{/update/{id}(id=${record.id})}"><span><i class="fa fa-edit fa-lg" aria-hidden="true"></i></span></a>
         </td>
     </tr>
 
