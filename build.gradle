@@ -46,3 +46,4 @@ eclipse {
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.12'
 }
+apply plugin: 'war'
