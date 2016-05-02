@@ -63,13 +63,14 @@ public class WebController {
         System.out.println("we have id"+id);
         Record editRecord= recordServiceInterface.findRecord(id);
         model.addAttribute("editRecord", editRecord);
-        return "update";
+        model.addAttribute("allRecords", (ArrayList<Record>)recordServiceInterface.getAllRecords());
+        return "/update";
     }
 
-    @RequestMapping(value = {"/update/"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/record/update"}, method = RequestMethod.POST)
     public String updateRecord(@ModelAttribute("editRecord") Record editRecord){
         System.out.println("we have editRecord"+editRecord);
-        //recordServiceInterface.editRecord(editRecord);
+        recordServiceInterface.editRecord(editRecord);
 
         return "redirect:/collection";
     }
