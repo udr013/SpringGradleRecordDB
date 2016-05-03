@@ -17,6 +17,11 @@ body{
 #col-form{
     width: 90%;
 }
+input, select{
+    margin-inside: 3px;
+    border-radius: 6px;
+    border-color: #815a24;
+}
 
 #artist #label{
     width: 15%;
@@ -30,26 +35,71 @@ body{
     width: 5%;
 }
 table{
+    background-color: #242323;
+    border: 2px groove #815a24;
     width: 80%;
     align-content: center;
     margin-bottom: 55px;
 }
+table>tr{
+    margin-left: 10px;
+    border:2px groove #815a24;
+}
+td.artist{
+    padding-left: 10px;
+}
 
+th#artist{
+    padding-left: 10px;
+}
+#button{
+    color: #815a24;
+    background-color: #111111;
+}
+
+form{
+    margin: 2%;
+}
 
 h2{
     text-align: center;
     color: #c7c7c7;
     font-family: Aerosol;
 }
-article{
-    margin: 20px 10%;
+#clips>article{
+
+    margin: 20px;
     border: 2px groove #815a24;
-    min-height: 205px;
+    min-height: 210px;
 }
 
  article h3{
     color: #815a24;
 }
+ p{
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+
+ #clips{
+     float: left;
+     width: 83%;
+     margin-bottom: 55px;
+
+
+ }
+ aside{
+     margin:24px 20px 20px 0px ;
+     border: 2px groove #815a24;
+     width: 15%;
+     border-radius: 8px;
+     float: right;
+ }
+
+aside>article {
+    padding: 10px;
+}
+
 iframe{
 
     float:left;

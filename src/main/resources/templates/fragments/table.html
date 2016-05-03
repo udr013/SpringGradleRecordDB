@@ -5,8 +5,8 @@
 </head>
 <body>
 <table id="table" th:fragment="table">
-    <tr class="btn-success">
-        <th id="artist">Artist</th>
+    <tr>
+        <th th:class="artist" id="artist">Artist</th>
         <th id="album">Album</th>
         <th id="year">Year</th>
         <th id="label">Label</th>
@@ -16,11 +16,11 @@
 
 
     <tbody>
-    <tr th:if="${#lists.isEmpty(allRecords)}" class="btn-warning">
+    <tr th:if="${#lists.isEmpty(allRecords)}" >
         <td colspan="5" align="center">No Records in your collection yet!!!</td>
     </tr>
     <tr th:each="record : ${allRecords}">
-        <td th:text="${record.artist}"></td>
+        <td th:class="artist" th:text="${record.artist}"></td>
         <td th:text="${record.album}"></td>
         <td th:text="${record.getdate_of_release()}"></td>
         <td th:text="${record.label}"></td>
