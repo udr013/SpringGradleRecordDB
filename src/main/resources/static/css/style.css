@@ -1,215 +1,233 @@
 @font-face {
     font-family: Aerosol;
-    src: url('../fonts/Aerosol.ttf')format('truetype');
+    src: url('../fonts/Aerosol.ttf') format('truetype');
 }
 
-
-
-h1{
+h1 {
     color: #815a24;
     font-size: 60px;
     text-align: center;
     font-family: Aerosol;
 }
 
-body{
+body {
     margin: 0px;
 }
 
-#col-form{
+#col-form {
     width: 90%;
 }
-input, select{
+
+input, select {
     margin-inside: 3px;
     border-radius: 6px;
     border-color: #815a24;
 }
 
-#artist #label{
-    width: 15%;
+#artist #label {
+    width: 16%;
+}
+#format {
+    width: 12%;
 }
 
-#album{
-    width: 30%;
+#album {
+    width: 32%;
 }
 
-#year #price{
-    width: 5%;
+#year {
+    width: 12%;
 }
-table{
+
+#price {
+    width: 7%;
+}
+
+table {
     background-color: #242323;
     border: 2px groove #815a24;
     width: 80%;
     align-content: center;
     margin-bottom: 55px;
 }
-table>tr{
+
+table > tr {
     margin-left: 10px;
-    border:2px groove #815a24;
+    border: 2px groove #815a24;
 }
-td.artist{
+
+td.artist {
     padding-left: 10px;
 }
 
-th#artist{
+th#artist {
     padding-left: 10px;
 }
-th a{
-    text-decoration:none;
+
+th  {
     color: #815a24;
 }
-.button{
+#pricefield>span{
+    float: right;
+}
+.button {
     color: #815a24;
     background-color: #111111;
 }
 
-form{
+form {
     margin: 2%;
 }
 
-h2{
+h2 {
     text-align: center;
     color: #c7c7c7;
     font-family: Aerosol;
 }
-#clips>article{
+
+#clips > article {
 
     margin: 20px;
     border: 2px groove #815a24;
     min-height: 210px;
 }
 
- article h3{
+article h3 {
     color: #815a24;
 }
- p{
-     padding-left: 5px;
-     padding-right: 5px;
- }
 
- #clips{
-     float: left;
-     width: 83%;
-     margin-bottom: 55px;
- }
+p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
- aside{
-     margin:24px 20px 20px 0px ;
-     border: 2px groove #815a24;
-     width: 15%;
-     border-radius: 8px;
-     float: right;
- }
+#clips {
+    float: left;
+    width: 83%;
+    margin-bottom: 55px;
+}
 
-aside>article {
+aside {
+    margin: 24px 20px 20px 0px;
+    border: 2px groove #815a24;
+    width: 15%;
+    border-radius: 8px;
+    float: right;
+}
+
+aside > article {
     padding: 10px;
 }
 
-iframe{
+iframe {
 
-    float:left;
+    float: left;
     margin-left: 10px;
     margin-right: 10px;
 }
-th{
+
+th {
     text-align: left;
     font-family: Aerosol;
     font-size: 1.5em;
 }
 
-#overviewTitle{
+#overviewTitle {
     font-size: 2em;
 }
 
 #footer {
 
-    position:fixed;
-    bottom:0;
-    width:100%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     /*height:60px;    Height of the footer */
-    background:#141414;
+    background: #141414;
 }
 
-#pageheader{
+#pageheader {
     position: relative;
-    top:0;
+    top: 0;
     background-color: #141414;
 }
 
-footer a{
-    color:#815a24;
+footer a {
+    color: #815a24;
     text-decoration: none;
     margin-left: 10px;
     font-stretch: ultra-expanded;
 }
 
-td a{
+td a {
     text-decoration: none;
 }
-i{
-    color:#815a24;
+
+i {
+    color: #815a24;
 }
 
-footer span{
-    color:#888888;
+footer span {
+    color: #888888;
 }
 
-
-body{
-    color:#ffffff;
+body {
+    color: #ffffff;
     background-color: #303030;
 }
 
-
-input{
+input {
     margin: 10px;
 }
 
-header h1{
+header h1 {
 
-    margin:0px;
+    margin: 0px;
     padding-top: 10px;
 }
 
-header h2{
-    color:#969696;
+header h2 {
+    color: #969696;
     font-size: 30px;
-    margin:6px;
+    margin: 6px;
 
 }
-header img{
+
+header img {
     float: left;
-    margin:20px 30px; ;
+    margin: 20px 30px;;
     border: 4px outset #815a24;
 
     /*<!--width: 25%;-->*/
 }
 
-#navbar ul li{
+#navbar ul li {
     display: inline-block;
     padding: 0px 5%;
 }
 
-#navbar ul li a{
-    text-decoration: none;/*removes the underlining from the link*/
+#navbar ul li a {
+    text-decoration: none; /*removes the underlining from the link*/
     color: #888888;
     font-size: 1.5em;
 }
 
-#navbar ul li a:hover{
+#navbar ul li a:hover {
     background: #242323;
     /*padding: 2px 2%;*/
 }
 
-#navbar{
+#navbar {
     align-content: center;
     background-color: #111111;
-    border-style:solid;
+    border-style: solid;
     border-width: 2px;
     border-color: #815a24 transparent;
 }
+th p{
+    margin:2px;
+}
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     #navbar {
         display: block;
         width: 100%
@@ -219,7 +237,8 @@ header img{
         margin: 10px;
         width: auto;
     }
-    #clips{
+
+    #clips {
         float: left;
         width: 100%;
         margin: 10px 10px 55px;

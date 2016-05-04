@@ -106,6 +106,72 @@ public class WebController {
         return "collection";
     }
 
+    @RequestMapping("/sortCollection/artist/reverse")
+    public String reverseSortByArtistCollection(Model model) {
+        System.out.println("sortByArtistCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new ArtistCompare());
+        Collections.reverse(sortRecords);
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping("/sortCollection/album/reverse")
+    public String reverseSortByAlbumCollection(Model model) {
+        System.out.println("sortByAlbumCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new AlbumCompare());
+        Collections.reverse(sortRecords);
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping("/sortCollection/year/reverse")
+    public String reverseSortByDateCollection(Model model) {
+        System.out.println("sortByDateCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new DateCompare());
+        Collections.reverse(sortRecords);
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping(value = "sortCollection/format/reverse")
+    public String reverseSortByFormatCollection(Model model) {
+        System.out.println("sortByFormatCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new FormatCompare());
+        Collections.reverse(sortRecords);
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping(value = "/sortCollection/label/reverse")
+    public String reverseSortByLabelCollection(Model model) {
+        System.out.println("sortByLabelCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new LabelCompare());
+        Collections.reverse(sortRecords);
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping(value = "/sortCollection/price/reverse")
+    public String reverseSortByPriceCollection(Model model) {
+        System.out.println("sortByPriceCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new PriceCompare());
+        Collections.reverse(sortRecords);
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
     @RequestMapping(value = {"/record/save"}, method = RequestMethod.POST)
     public String saveRecord(@ModelAttribute("record") Record record) {
        recordServiceInterface.saveRecord(record);

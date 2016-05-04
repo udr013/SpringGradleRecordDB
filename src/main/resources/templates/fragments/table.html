@@ -6,12 +6,18 @@
 <body>
 <table id="table" th:fragment="table">
     <tr>
-        <th th:class="artist" id="artist"><a th:href="@{/sortCollection/artist}">Artist</a></th>
-        <th id="album"><a th:href="@{/sortCollection/album}">Album</a></th>
-        <th id="year"><a th:href="@{/sortCollection/year}">Year</a></th>
-        <th id="label"><a th:href="@{/sortCollection/label}">Label</a></th>
-        <th id="format"><a th:href="@{/sortCollection/format}">Format</a></th>
-        <th id="price"><a th:href="@{/sortCollection/price}">Price</a></th>
+        <th th:class="artist" id="artist">Artist<span><p><a th:href="@{/sortCollection/artist}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/artist/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="album">Album<span><p><a th:href="@{/sortCollection/album}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/album/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="year">Year<span><p><a th:href="@{/sortCollection/year}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/year/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="label">Label<span><p><a th:href="@{/sortCollection/label}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/label/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="format">Format<span><p><a th:href="@{/sortCollection/format}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/format/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="price">Price<span><p><a th:href="@{/sortCollection/price}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/price/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
     </tr>
 
 
@@ -28,7 +34,7 @@
         <!-- Set minimum integer digits and (exact) decimal digits-->
         <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td>
         <td>
-            <a th:href="@{/delete/{id}(id=${record.id})}"><span><i class="fa fa-close fa-lg" aria-hidden="true"></i>&emsp;</span></a>
+            <a th:href="@{/delete/{id}(id=${record.id})}">&emsp;&emsp;<span><i class="fa fa-close fa-lg" aria-hidden="true"></i>&emsp;</span></a>
             <a th:href="@{/update/{id}(id=${record.id})}"><span><i class="fa fa-edit fa-lg" aria-hidden="true"></i></span></a>
         </td>
     </tr>
