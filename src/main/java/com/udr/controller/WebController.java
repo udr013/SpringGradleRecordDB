@@ -1,7 +1,7 @@
 package com.udr.controller;
 
 import com.udr.models.Record;
-import com.udr.services.RecordServiceInterface;
+import com.udr.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by udr013 on 21-4-2016.
@@ -22,6 +23,7 @@ public class WebController {
 
     @Autowired
     RecordServiceInterface recordServiceInterface;
+
 
 //    @Autowired
 //    public void setRecordServiceInterface(RecordServiceInterface recordServiceInterface) {
@@ -37,9 +39,70 @@ public class WebController {
 
     @RequestMapping("/collection")
     public String viewCollection(Model model) {
+        System.out.println("collection");
         model.addAttribute("record", new Record());
-        model.addAttribute("allRecords", (ArrayList<Record>)recordServiceInterface.getAllRecords());
+        ArrayList<Record> sortRecords = (ArrayList<Record> )recordServiceInterface.getAllRecords();
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
 
+    @RequestMapping("/sortCollection/artist")
+    public String sortByArtistCollection(Model model) {
+        System.out.println("sortByArtistCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new ArtistCompare());
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping("/sortCollection/album")
+    public String sortByAlbumCollection(Model model) {
+        System.out.println("sortByAlbumCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new AlbumCompare());
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping("/sortCollection/year")
+    public String sortByDateCollection(Model model) {
+        System.out.println("sortByDateCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new DateCompare());
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping(value = "sortCollection/format")
+    public String sortByFormatCollection(Model model) {
+        System.out.println("sortByFormatCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new FormatCompare());
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping(value = "/sortCollection/label")
+    public String sortByLabelCollection(Model model) {
+        System.out.println("sortByLabelCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new LabelCompare());
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping(value = "/sortCollection/price")
+    public String sortByPriceCollection(Model model) {
+        System.out.println("sortByPriceCollection");
+        model.addAttribute("record", new Record());
+        ArrayList<Record> sortRecords = (ArrayList<Record>) recordServiceInterface.getAllRecords();
+        Collections.sort(sortRecords, new PriceCompare());
+        model.addAttribute("allRecords", sortRecords);
         return "collection";
     }
 

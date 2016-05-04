@@ -3,6 +3,8 @@
     src: url('../fonts/Aerosol.ttf')format('truetype');
 }
 
+
+
 h1{
     color: #815a24;
     font-size: 60px;
@@ -52,7 +54,11 @@ td.artist{
 th#artist{
     padding-left: 10px;
 }
-#button{
+th a{
+    text-decoration:none;
+    color: #815a24;
+}
+.button{
     color: #815a24;
     background-color: #111111;
 }
@@ -85,9 +91,8 @@ h2{
      float: left;
      width: 83%;
      margin-bottom: 55px;
-
-
  }
+
  aside{
      margin:24px 20px 20px 0px ;
      border: 2px groove #815a24;
@@ -202,4 +207,21 @@ header img{
     border-style:solid;
     border-width: 2px;
     border-color: #815a24 transparent;
+}
+
+@media screen and (max-width:768px) {
+    #navbar {
+        display: block;
+        width: 100%
+    }
+
+    aside {
+        margin: 10px;
+        width: auto;
+    }
+    #clips{
+        float: left;
+        width: 100%;
+        margin: 10px 10px 55px;
+    }
 }

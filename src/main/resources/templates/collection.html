@@ -1,6 +1,6 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" th:href="@{css/style.css}"/>
+<link rel="stylesheet" th:href="@{/css/style.css}"/>
 <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css}"/>
 
 <head>
@@ -14,6 +14,7 @@
     <h2 class="overviewTitle">Collection overview:</h2>
 
 
+
     <form id="col-form" th:object="${record}" th:action="@{/record/save}" action="#" method="post">
         <input type="text" th:field="*{artist}" class="form-control" placeholder=" artist"/>
 
@@ -23,15 +24,15 @@
 
         <input type="text" th:field="*{label}" class="form-control" placeholder=" label"/>
         <select type="text" th:field="*{format}" class="form-control">
-            <option name="select" value="lp">LP</option>
-            <option name="select" value="2lp">2LP</option>
-            <option name="select" value="3lp">3LP</option>
-            <option name="select" value="12">12"</option>
-            <option name="select" value="10">10"</option>
-            <option name="select" value="7">7"</option>
+            <option name="select" value="LP">LP</option>
+            <option name="select" value="LP2">LP2</option>
+            <option name="select" value="LP3">LP3</option>
+            <option name="select" value="12">12</option>
+            <option name="select" value="10">10</option>
+            <option name="select" value="7">7</option>
         </select>
         <input type="number" step="0.01" th:field="*{price}" class="form-control" placeholder=" price"/>
-        <input id="button" type="submit" value="Submit"/>
+        <input class="button" type="submit" value="Submit"/>
     </form>
     <table th:replace="fragments/table :: table">
     </table>

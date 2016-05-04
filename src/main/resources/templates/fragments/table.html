@@ -6,12 +6,12 @@
 <body>
 <table id="table" th:fragment="table">
     <tr>
-        <th th:class="artist" id="artist">Artist</th>
-        <th id="album">Album</th>
-        <th id="year">Year</th>
-        <th id="label">Label</th>
-        <th id="format">Format</th>
-        <th id="price">Price</th>
+        <th th:class="artist" id="artist"><a th:href="@{/sortCollection/artist}">Artist</a></th>
+        <th id="album"><a th:href="@{/sortCollection/album}">Album</a></th>
+        <th id="year"><a th:href="@{/sortCollection/year}">Year</a></th>
+        <th id="label"><a th:href="@{/sortCollection/label}">Label</a></th>
+        <th id="format"><a th:href="@{/sortCollection/format}">Format</a></th>
+        <th id="price"><a th:href="@{/sortCollection/price}">Price</a></th>
     </tr>
 
 
