@@ -22,6 +22,8 @@ input, select {
     margin-inside: 3px;
     border-radius: 6px;
     border-color: #815a24;
+    outline-color:#815a24;
+    -moz-outline-radius: 6px;
 }
 
 #artist #label {
@@ -64,7 +66,8 @@ th#artist {
     padding-left: 10px;
 }
 
-th  {
+ table th  {
+     font-size: 1.5em;
     color: #815a24;
 }
 #pricefield>span{
