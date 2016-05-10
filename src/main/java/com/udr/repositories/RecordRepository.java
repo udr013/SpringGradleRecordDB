@@ -8,4 +8,7 @@ import org.springframework.data.repository.CrudRepository;
  * define a Spring Data JPA repository, simply extend The JPA CrudRepository and asign the domain class and it's ID parameter
  */
 public interface RecordRepository extends CrudRepository<Record,Integer > {
+
+
+    Iterable<Record> findByArtist(String name);
 }

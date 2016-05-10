@@ -59,6 +59,9 @@ public class RecordServiceImplementation implements RecordServiceInterface {
 		return (Collection<Record>)itr;
 	}
 
-
-
+	@Override
+	public Collection<Record> findByArtist(String name) {
+		Iterable<Record> itr = recordRepository.findByArtist(name);
+		return (Collection<Record>)itr;
+	}
 }

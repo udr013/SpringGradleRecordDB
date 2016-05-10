@@ -13,7 +13,8 @@
 <div class="database_table" align="center">
     <h2 class="overviewTitle">Collection overview:</h2>
 
-
+    <form th:replace="fragments/artistForm :: artistform">
+    </form>
 
     <form id="col-form" th:object="${record}" th:action="@{/record/save}" action="#" method="post">
         <input type="text" th:field="*{artist}" class="form-control" placeholder=" artist"/>

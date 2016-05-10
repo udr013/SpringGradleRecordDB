@@ -11,4 +11,5 @@ public interface RecordServiceInterface {
 	public Record editRecord(Record record);
 	public Record findRecord(Integer id);
 	public Collection<Record> getAllRecords();
+	public Collection<Record> findByArtist(String name);
 }
