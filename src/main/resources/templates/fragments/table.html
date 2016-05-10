@@ -4,7 +4,8 @@
 
 </head>
 <body>
-<table id="table" th:fragment="table">
+<table id="table" th:border="1" th:fragment="table">
+    <caption>Collection overview</caption>
     <tr>
         <th th:class="artist" id="artist">Artist<span><p><a th:href="@{/sortCollection/artist}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
             <a th:href="@{/sortCollection/artist/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>

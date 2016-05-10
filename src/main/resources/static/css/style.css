@@ -46,6 +46,7 @@ input, select, button {
 }
 
 table {
+    border-collapse: collapse;
     background-color: #242323;
     border: 2px groove #815a24;
     width: 80%;
@@ -56,6 +57,12 @@ table {
 table > tr {
     margin-left: 10px;
     border: 2px groove #815a24;
+}
+th{
+    background-color: #242323;
+}
+tr:nth-child(odd){
+    background-color: #272727;
 }
 
 td.artist {
