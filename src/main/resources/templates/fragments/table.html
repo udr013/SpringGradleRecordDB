@@ -6,6 +6,7 @@
 <body>
 <table id="table" th:border="1" th:fragment="table">
     <caption>Collection overview</caption>
+    <thead>
     <tr>
         <th th:class="artist" id="artist">Artist<span><p><a th:href="@{/sortCollection/artist}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
             <a th:href="@{/sortCollection/artist/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
@@ -20,7 +21,7 @@
         <th id="price">Price<span><p><a th:href="@{/sortCollection/price}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
             <a th:href="@{/sortCollection/price/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
     </tr>
-
+    </thead>
 
     <tbody>
     <tr th:if="${#lists.isEmpty(allRecords)}" >

@@ -10,6 +10,10 @@ h1 {
     font-family: Aerosol;
 }
 
+tbody{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 body {
     margin: 0px;
 }
