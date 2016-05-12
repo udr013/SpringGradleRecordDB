@@ -34,6 +34,13 @@ public class WebController {
 
     }
 
+    @RequestMapping("/login")
+    public String loginPage(){
+
+        return "login";
+
+    }
+
     @RequestMapping("/completeCollection")
     public String viewCollection(Model model) {
         System.out.println("collection");
