@@ -9,16 +9,28 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
+<article id="loginText">
+    <p>
+    <h3>Welcome, to access or create your database you need to login</h3>
+    The collection page allows you to create your own record database ,to keep track of your music collection. Here is an image
+how your database will look like. You will be able to sort the collection on any field or search on a particular artist to get an overview
+of only the records of that artist.<br/> If you didn't sign up already, follow the link to the:
+    <a th:href="@{/registrationPage}"> registration page.</a>
+</p>
+</article>
+
 <div th:if="${param.error}">
     Invalid username and password.
 </div>
 <div th:if="${param.logout}">
     You have been logged out.
 </div>
-<form th:action="@{/login}" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
+<form id="loginForm" th:action="@{/login}" method="post">
+    <P>Login or use the register button to get to the registration page.</P>
+    <label> User Name : <input type="text" name="username"/> </label><br/>
+    <label> Password: <input type="password" name="password"/> </label><br/>
+    <input class="button" type="submit" value="Sign In"/>
+    <button class="button"><a href="#" th:href="@{/register}">Register</a></button><br/>
 </form>
 <footer>
     <div th:replace="fragments/footer :: footer">

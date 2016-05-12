@@ -7,7 +7,7 @@
 <div id="pageheader" th:fragment="header">
     <header>
         <img th:src="@{/images/records.jpg}" alt="nice record image"/>
-        <h1>The Record Collector Database
+        <h1>The Record Collector
             <br/>
             <h2>Keep track of your precious vinyl</h2>
         </h1>
@@ -19,6 +19,7 @@
             <li><a href="#" th:href="@{/completeCollection}">Collection</a></li>
             <li><a href="#" th:href="@{/about}"> About</a></li>
             <li><a href="#" th:href="@{/contact}"> Contact</a></li>
+            <button class="button"><a href="#" th:href="@{/login}">Login</a></button> <button class="button"><a href="#" th:href="@{/logout}">Logout</a></button>
         </ul>
     </nav>
 </div>

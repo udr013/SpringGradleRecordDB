@@ -153,6 +153,22 @@ th {
     font-size: 1.5em;
 }
 
+#loginText{
+    width: 80%;
+    margin-left: 10%;
+}
+#loginText a{
+    color: #815a24;
+    text-decoration: none;
+}
+
+#loginForm{
+    padding:20px 10px;
+    margin: 0px 15%;
+    border:solid 2px #815a24;
+    border-radius: 6px;
+}
+
 #overviewTitle {
     font-size: 2em;
 }
