@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Collection;
 
 /**
  * Created by udr013 on 12-5-2016.
@@ -26,17 +27,21 @@ public class UserController {
 
     @RequestMapping("/register")
     public String registerPage(Model model){
-       // Collection<User> allUsers = userServiceInterface.getAllUsers();
+       Collection<User> allUsers = userServiceInterface.getAllUsers();
+        for(User user:allUsers){
+            System.out.println(user);
+        }
         model.addAttribute("user", new User());
-        //model.addAttribute("allUsers", allUsers);
-        System.out.println("register");
+        model.addAttribute("allUsers", allUsers);
         return "register";
     }
 
     @RequestMapping(value = {"/register/save"}, method = RequestMethod.POST)
         public String registerPage( @ModelAttribute("user") User user) {
         userServiceInterface.saveUser(user);
-        return "login";
+        System.out.println(user);
+        System.out.println("saving user");
+        return "register";
 
     }
 
