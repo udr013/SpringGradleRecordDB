@@ -26,7 +26,9 @@ public class UserController {
 
     @RequestMapping("/register")
     public String registerPage(Model model){
+       // Collection<User> allUsers = userServiceInterface.getAllUsers();
         model.addAttribute("user", new User());
+        //model.addAttribute("allUsers", allUsers);
         System.out.println("register");
         return "register";
     }

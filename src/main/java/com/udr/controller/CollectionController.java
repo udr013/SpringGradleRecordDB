@@ -39,7 +39,7 @@ public class CollectionController {
     public String saveRecord(@ModelAttribute("record") Record record) {
         recordServiceInterface.saveRecord(record);
 
-        return "redirect:/collection";
+        return "completeCollection";
     }
     @RequestMapping(value = {"/delete/{id}"}, method = RequestMethod.GET)
     public String deleteRecord(@PathVariable("id") Integer  id) {
