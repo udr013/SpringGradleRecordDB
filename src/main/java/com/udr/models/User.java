@@ -1,7 +1,6 @@
 package com.udr.models;
 
 import javax.persistence.*;
-import java.sql.Date;
 
 /**
  * Created by udr013 on 11-5-2016.
@@ -16,14 +15,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "sureName", length = 50, nullable = true)
-    private String sureName;
+    @Column(name = "userName",length = 50, nullable = true )
+    private String userName;
 
-    @Column(name = "firstName", length = 50, nullable = true)
-    private String firstName;
+    @Column(name = "password")
+    private String password;
 
-    @Column(name = "first_date")
-    private Date join_date;
+    @Column(name = "email")
+    private String email;
+
 
 
 }

@@ -2,19 +2,80 @@ package com.udr.controller;
 
 import com.udr.models.Record;
 import com.udr.services.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Collections;
-
-import static com.udr.controller.WebController.sortRecords;
 
 /**
  * Created by udr013 on 11-5-2016.
  */
 @Controller
-public class SortController {
+public class CollectionController {
+
+    @Autowired
+    RecordServiceInterface recordServiceInterface;
+
+
+    //    @Autowired
+//    public void setRecordServiceInterface(RecordServiceInterface recordServiceInterface) {
+//        this.recordServiceInterface = recordServiceInterface;
+//    }
+    static ArrayList<Record> sortRecords;
+
+    @RequestMapping("/completeCollection")
+    public String viewCollection(Model model) {
+        System.out.println("collection");
+        model.addAttribute("record", new Record());
+        sortRecords = (ArrayList<Record>)recordServiceInterface.getAllRecords();
+        model.addAttribute("allRecords", sortRecords);
+        return "collection";
+    }
+
+    @RequestMapping(value = {"/record/save"}, method = RequestMethod.POST)
+    public String saveRecord(@ModelAttribute("record") Record record) {
+        recordServiceInterface.saveRecord(record);
+
+        return "redirect:/collection";
+    }
+    @RequestMapping(value = {"/delete/{id}"}, method = RequestMethod.GET)
+    public String deleteRecord(@PathVariable("id") Integer  id) {
+        System.out.println("we have id"+id);
+        recordServiceInterface.deleteRecord(id);
+
+        return "redirect:/collection";
+    }
+
+    @RequestMapping(value = {"/update/{id}"}, method = RequestMethod.GET)
+    public String editRecord(@PathVariable("id") Integer  id,Model model) {
+
+        System.out.println("we have id"+id);
+        Record editRecord= recordServiceInterface.findRecord(id);
+        model.addAttribute("editRecord", editRecord);
+        model.addAttribute("allRecords", sortRecords);
+        return "/update";
+    }
+
+    @RequestMapping(value = {"/record/update"}, method = RequestMethod.POST)
+    public String updateRecord(@ModelAttribute("editRecord") Record editRecord){
+        System.out.println("we have editRecord"+editRecord);
+        recordServiceInterface.editRecord(editRecord);
+
+        return "redirect:/collection";
+    }
+
+    @RequestMapping(value = "/getAllByArtist", method = RequestMethod.GET)
+    //@ResponseBody
+    public String getAllByArtist(@RequestParam("artist") String artist, Model model) {
+        System.out.println(artist);
+        sortRecords = (ArrayList<Record> )recordServiceInterface.findByArtist(artist);
+        model.addAttribute("allRecords", sortRecords);
+
+        return "artistCollection";
+    }
 
     @RequestMapping("/sortCollection/artist")
     public String sortByArtistCollection(Model model) {

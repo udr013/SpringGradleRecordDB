@@ -157,12 +157,15 @@ th {
     width: 80%;
     margin-left: 10%;
 }
+#loginHeader{
+    color:#815a24;
+}
 #loginText a{
     color: #815a24;
     text-decoration: none;
 }
 
-#loginForm{
+#loginForm, #regForm{
     padding:20px 10px;
     margin: 0px 15%;
     border:solid 2px #815a24;

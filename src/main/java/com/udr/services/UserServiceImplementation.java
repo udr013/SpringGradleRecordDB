@@ -3,6 +3,7 @@ package com.udr.services;
 import com.udr.models.User;
 import com.udr.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
@@ -10,6 +11,7 @@ import java.util.Collection;
 /**
  * Created by udr013 on 11-5-2016.
  */
+@Service
 @Transactional
 public class UserServiceImplementation implements UserServiceInterface {
 
