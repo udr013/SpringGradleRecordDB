@@ -26,7 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/css/**", "/fonts/**", "/images/**","/","/about","/contact","/register").permitAll()
+                .antMatchers("/css/**", "/fonts/**", "/images/**","/","/about","/contact","/register","/register/save").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login")//because we override and create our own login page we need to give permission

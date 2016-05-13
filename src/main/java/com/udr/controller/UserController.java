@@ -41,7 +41,7 @@ public class UserController {
         userServiceInterface.saveUser(user);
         System.out.println(user);
         System.out.println("saving user");
-        return "register";
+        return "redirect:/login";
 
     }
 
