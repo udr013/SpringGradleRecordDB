@@ -50,6 +50,11 @@ public class UserServiceImplementation implements UserServiceInterface {
     public Collection<User> getAllUsers() {
         return (Collection<User>) userRepository.findAll();
     }
+
+    @Override
+    public User findByName(String name) {
+        return userRepository.findByUsername(name);
+    }
 //
 //    @Override
 //    public Collection<User> findByName(String name) {

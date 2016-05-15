@@ -13,6 +13,8 @@ import java.util.Collection;
 @Transactional
 public class RecordServiceImplementation implements RecordServiceInterface {
 
+
+
 	@Autowired
 	public void setRecordRepository(RecordRepository recordRepository) {
 		this.recordRepository = recordRepository;
@@ -63,5 +65,10 @@ public class RecordServiceImplementation implements RecordServiceInterface {
 	public Collection<Record> findByArtist(String name) {
 		Iterable<Record> itr = recordRepository.findByArtist(name);
 		return (Collection<Record>)itr;
+	}
+
+	@Override
+	public Collection<Record> getAllRecordsByIdusers(int id) {
+		return recordRepository.getAllRecordsByIdusers(id);
 	}
 }

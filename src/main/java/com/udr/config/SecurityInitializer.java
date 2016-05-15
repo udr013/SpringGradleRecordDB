@@ -1,4 +1,4 @@
-package com.udr.security;
+package com.udr.config;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

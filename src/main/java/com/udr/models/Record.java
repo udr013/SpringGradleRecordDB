@@ -8,6 +8,17 @@ import java.sql.Date;
 @Table(name = "records")
 public class Record {
 
+    @ManyToOne
+    @JoinColumn(name = "idusers", insertable = false, updatable = false)
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     @Id
     @Column(name = "id")
@@ -25,6 +36,17 @@ public class Record {
 
     @Column(name = "label", nullable = true)
     private String label;
+
+    @Column(name = "idusers", nullable = false)
+    private int idusers;
+
+    public int getIdusers() {
+        return idusers;
+    }
+
+    public void setIdusers(int idusers) {
+        this.idusers = idusers;
+    }
 
     public String getFormat() {
         return format;

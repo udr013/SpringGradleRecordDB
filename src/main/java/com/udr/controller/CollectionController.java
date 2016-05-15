@@ -1,12 +1,17 @@
 package com.udr.controller;
 
+import com.udr.compare.*;
 import com.udr.models.Record;
-import com.udr.services.*;
+import com.udr.models.User;
+import com.udr.services.RecordServiceInterface;
+import com.udr.services.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -19,6 +24,9 @@ public class CollectionController {
     @Autowired
     RecordServiceInterface recordServiceInterface;
 
+    @Autowired
+    UserServiceInterface userServiceInterface;
+
 
     //    @Autowired
 //    public void setRecordServiceInterface(RecordServiceInterface recordServiceInterface) {
@@ -27,11 +35,19 @@ public class CollectionController {
     static ArrayList<Record> sortRecords;
 
     @RequestMapping("/completeCollection")
-    public String viewCollection(Model model) {
+    public String viewCollection(Model model, Principal principal) {
         System.out.println("collection");
+        org.springframework.security.core.userdetails.User sessionUser =(org.springframework.security.core.userdetails.User)((Authentication)principal).getPrincipal();
+        User currentUser = userServiceInterface.findByName(sessionUser.getUsername());
+
+        model.addAttribute("currentuser",currentUser);
+        System.out.println("this is currentUser: "+currentUser);
         model.addAttribute("record", new Record());
-        sortRecords = (ArrayList<Record>)recordServiceInterface.getAllRecords();
+        sortRecords = (ArrayList<Record>)recordServiceInterface.getAllRecordsByIdusers(currentUser.getId());
         model.addAttribute("allRecords", sortRecords);
+        for(Record record:sortRecords){
+            System.out.println(record);
+        }
         return "collection";
     }
 
@@ -39,14 +55,14 @@ public class CollectionController {
     public String saveRecord(@ModelAttribute("record") Record record) {
         recordServiceInterface.saveRecord(record);
 
-        return "completeCollection";
+        return "redirect:/completeCollection";
     }
     @RequestMapping(value = {"/delete/{id}"}, method = RequestMethod.GET)
     public String deleteRecord(@PathVariable("id") Integer  id) {
         System.out.println("we have id"+id);
         recordServiceInterface.deleteRecord(id);
 
-        return "redirect:/collection";
+        return "collection";
     }
 
     @RequestMapping(value = {"/update/{id}"}, method = RequestMethod.GET)

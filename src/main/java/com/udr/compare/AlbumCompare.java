@@ -1,4 +1,4 @@
-package com.udr.services;
+package com.udr.compare;
 
 import com.udr.models.Record;
 

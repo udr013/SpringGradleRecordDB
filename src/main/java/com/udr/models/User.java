@@ -34,6 +34,7 @@ public class User {
     }
 
     public String getUserName() {
+        System.out.println(username);
         return username;
     }
 
@@ -57,4 +58,13 @@ public class User {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

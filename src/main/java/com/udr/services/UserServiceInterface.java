@@ -11,5 +11,5 @@ public interface UserServiceInterface {
     public User editUser(User user);
     public User findUser(Integer id);
     public Collection<User> getAllUsers();
-    //public Collection<User> findByName(String name);
+    public User findByName(String name);
 }
