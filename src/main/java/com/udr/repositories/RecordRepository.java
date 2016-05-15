@@ -12,6 +12,6 @@ import java.util.Collection;
 public interface RecordRepository extends CrudRepository<Record,Integer > {
 
 
-    Iterable<Record> findByArtist(String name);
+    Collection<Record> findByArtistAndIdusers(String name, int id);
     public Collection<Record> getAllRecordsByIdusers(int id);
 }

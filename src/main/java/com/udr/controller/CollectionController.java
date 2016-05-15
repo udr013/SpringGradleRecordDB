@@ -33,21 +33,18 @@ public class CollectionController {
 //        this.recordServiceInterface = recordServiceInterface;
 //    }
     static ArrayList<Record> sortRecords;
+    private User currentUser;
 
     @RequestMapping("/completeCollection")
     public String viewCollection(Model model, Principal principal) {
         System.out.println("collection");
         org.springframework.security.core.userdetails.User sessionUser =(org.springframework.security.core.userdetails.User)((Authentication)principal).getPrincipal();
-        User currentUser = userServiceInterface.findByName(sessionUser.getUsername());
-
+        currentUser = userServiceInterface.findByName(sessionUser.getUsername());
         model.addAttribute("currentuser",currentUser);
         System.out.println("this is currentUser: "+currentUser);
         model.addAttribute("record", new Record());
         sortRecords = (ArrayList<Record>)recordServiceInterface.getAllRecordsByIdusers(currentUser.getId());
         model.addAttribute("allRecords", sortRecords);
-        for(Record record:sortRecords){
-            System.out.println(record);
-        }
         return "collection";
     }
 
@@ -62,7 +59,7 @@ public class CollectionController {
         System.out.println("we have id"+id);
         recordServiceInterface.deleteRecord(id);
 
-        return "collection";
+        return "redirect:/completeCollection";
     }
 
     @RequestMapping(value = {"/update/{id}"}, method = RequestMethod.GET)
@@ -70,6 +67,7 @@ public class CollectionController {
 
         System.out.println("we have id"+id);
         Record editRecord= recordServiceInterface.findRecord(id);
+        model.addAttribute("currentuser",currentUser);
         model.addAttribute("editRecord", editRecord);
         model.addAttribute("allRecords", sortRecords);
         return "/update";
@@ -80,14 +78,15 @@ public class CollectionController {
         System.out.println("we have editRecord"+editRecord);
         recordServiceInterface.editRecord(editRecord);
 
-        return "redirect:/collection";
+        return "redirect:/completeCollection";
     }
 
     @RequestMapping(value = "/getAllByArtist", method = RequestMethod.GET)
     //@ResponseBody
     public String getAllByArtist(@RequestParam("artist") String artist, Model model) {
         System.out.println(artist);
-        sortRecords = (ArrayList<Record> )recordServiceInterface.findByArtist(artist);
+        //currentUser = userServiceInterface.findByName(sessionUser.getUsername());
+        sortRecords = (ArrayList<Record> )recordServiceInterface.findByArtistAndIdusers(artist,currentUser.getId());
         model.addAttribute("allRecords", sortRecords);
 
         return "artistCollection";

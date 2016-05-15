@@ -62,8 +62,8 @@ public class RecordServiceImplementation implements RecordServiceInterface {
 	}
 
 	@Override
-	public Collection<Record> findByArtist(String name) {
-		Iterable<Record> itr = recordRepository.findByArtist(name);
+	public Collection<Record> findByArtistAndIdusers(String name, int id) {
+		Iterable<Record> itr = recordRepository.findByArtistAndIdusers(name, id);
 		return (Collection<Record>)itr;
 	}
 
