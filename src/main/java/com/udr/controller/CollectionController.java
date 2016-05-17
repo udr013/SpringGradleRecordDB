@@ -70,7 +70,7 @@ public class CollectionController {
         model.addAttribute("currentuser",currentUser);
         model.addAttribute("editRecord", editRecord);
         model.addAttribute("allRecords", sortRecords);
-        return "/update";
+        return "update";
     }
 
     @RequestMapping(value = {"/record/update"}, method = RequestMethod.POST)
@@ -88,14 +88,16 @@ public class CollectionController {
         //currentUser = userServiceInterface.findByName(sessionUser.getUsername());
         sortRecords = (ArrayList<Record> )recordServiceInterface.findByArtistAndIdusers(artist,currentUser.getId());
         model.addAttribute("allRecords", sortRecords);
-
-        return "artistCollection";
+        model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
+        return "collection";
     }
 
     @RequestMapping("/sortCollection/artist")
     public String sortByArtistCollection(Model model) {
         System.out.println("sortByArtistCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new ArtistCompare());
         model.addAttribute("allRecords", sortRecords);
         return "collection";
@@ -105,6 +107,7 @@ public class CollectionController {
     public String sortByAlbumCollection(Model model) {
         System.out.println("sortByAlbumCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new AlbumCompare());
         model.addAttribute("allRecords", sortRecords);
         return "collection";
@@ -114,6 +117,7 @@ public class CollectionController {
     public String sortByDateCollection(Model model) {
         System.out.println("sortByDateCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new DateCompare());
         model.addAttribute("allRecords", sortRecords);
         return "collection";
@@ -123,6 +127,7 @@ public class CollectionController {
     public String sortByFormatCollection(Model model) {
         System.out.println("sortByFormatCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new FormatCompare());
         model.addAttribute("allRecords", sortRecords);
         return "collection";
@@ -132,6 +137,7 @@ public class CollectionController {
     public String sortByLabelCollection(Model model) {
         System.out.println("sortByLabelCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new LabelCompare());
         model.addAttribute("allRecords", sortRecords);
         return "collection";
@@ -141,6 +147,7 @@ public class CollectionController {
     public String sortByPriceCollection(Model model) {
         System.out.println("sortByPriceCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new PriceCompare());
         model.addAttribute("allRecords", sortRecords);
         return "collection";
@@ -152,6 +159,7 @@ public class CollectionController {
         model.addAttribute("record", new Record());
         Collections.sort(sortRecords, new ArtistCompare());
         Collections.reverse(sortRecords);
+        model.addAttribute("currentuser",currentUser);
         model.addAttribute("allRecords", sortRecords);
         return "collection";
     }
@@ -160,6 +168,7 @@ public class CollectionController {
     public String reverseSortByAlbumCollection(Model model) {
         System.out.println("sortByAlbumCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new AlbumCompare());
         Collections.reverse(sortRecords);
         model.addAttribute("allRecords", sortRecords);
@@ -170,6 +179,7 @@ public class CollectionController {
     public String reverseSortByDateCollection(Model model) {
         System.out.println("sortByDateCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new DateCompare());
         Collections.reverse(sortRecords);
         model.addAttribute("allRecords", sortRecords);
@@ -180,6 +190,7 @@ public class CollectionController {
     public String reverseSortByFormatCollection(Model model) {
         System.out.println("sortByFormatCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new FormatCompare());
         Collections.reverse(sortRecords);
         model.addAttribute("allRecords", sortRecords);
@@ -190,6 +201,7 @@ public class CollectionController {
     public String reverseSortByLabelCollection(Model model) {
         System.out.println("sortByLabelCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new LabelCompare());
         Collections.reverse(sortRecords);
         model.addAttribute("allRecords", sortRecords);
@@ -200,6 +212,7 @@ public class CollectionController {
     public String reverseSortByPriceCollection(Model model) {
         System.out.println("sortByPriceCollection");
         model.addAttribute("record", new Record());
+        model.addAttribute("currentuser",currentUser);
         Collections.sort(sortRecords, new PriceCompare());
         Collections.reverse(sortRecords);
         model.addAttribute("allRecords", sortRecords);

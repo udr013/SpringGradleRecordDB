@@ -8,9 +8,44 @@
 <body>
 <div th:replace="fragments/header :: header">
 </div>
-<h1>this page is currently under construction</h1>
+<main id="aboutContent">
+    <div>
+ <h2>this page was build using:</h2>
+    <br/>
+    <label>Tools:</label>
+    <ul>
+    <li>Intellij IDE</li>
+    <li>MySQL</li>
+    <li>GIMP</li>
+    <li>Chrome browser</li>
+       </ul>
+    <br/>
+    <label>Spring Framework:</label>
+    <ul>
+    <li>Spring boot</li>
+    <li>Thymeleaf</li>
+    <li>jdbc</li>
+    <li>jpa</li>
+    <li>hibernate</li>
+    <li>security</li>
+    </ul>
+    <br/>
+    <label>web:</label>
+    <ul>
+    <li>HTML5</li>
+    <li>CSS</li>
+    <li>Awesome-fonts</li>
+    </ul>
 
-<br/>
+</div><div>
+<h2>Some useful tutorials:</h2>
+    <ul>
+<li><a href="https://spring.io/guides">spring.io/guides</a></li>
+<li><a href="https://springframework.guru">Spring Framework Guru</a></li>
+    </ul>
+    </div>
+</main>
+
 
 <footer>
     <nav th:replace="fragments/footer :: footer">

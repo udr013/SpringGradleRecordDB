@@ -80,6 +80,7 @@
           <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final" />
           <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.1.0" />
           <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.1.5" />
+          <element id="library" level="project" name="Gradle: com.h2database:h2:1.4.191" />
         </element>
       </element>
       <element id="directory" name="META-INF">

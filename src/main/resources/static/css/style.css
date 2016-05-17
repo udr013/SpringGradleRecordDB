@@ -267,6 +267,29 @@ th p{
     margin:2px;
 }
 
+#aboutContent div{
+    margin: 20px 5% 55px 5%;
+    padding: 10px;
+    border: 2px solid #815a24;
+    border-radius: 6px;
+
+}
+#aboutContent li {
+    margin-left: 10%;
+}
+
+#aboutContent label {
+    font-size: 1.5em;
+    color: #815a24;
+}
+#aboutContent h2 {
+    font-family: Aerosol;
+    color: #c7c7c7;
+}
+#aboutContent a {
+    color: #815a24;
+}
+
 @media screen and (max-width: 768px) {
     #navbar {
         display: block;

@@ -29,16 +29,23 @@ repositories {
 	mavenCentral()
 }
 
+development {
+	dataSource {
+		dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+//		url = "jdbc:h2:~/cool;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+	}
 
-dependencies {
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-security')
-	compile('org.springframework.boot:spring-boot-starter-jdbc')
-	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	runtime('mysql:mysql-connector-java')
-	testCompile('org.springframework.boot:spring-boot-starter-test') 
-}
+
+	dependencies {
+		compile('org.springframework.boot:spring-boot-starter-data-jpa')
+		compile('org.springframework.boot:spring-boot-starter-security')
+		compile('org.springframework.boot:spring-boot-starter-jdbc')
+		compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+		compile('org.springframework.boot:spring-boot-starter-web')
+		compile('com.h2database:h2')
+		runtime('mysql:mysql-connector-java')
+		testCompile('org.springframework.boot:spring-boot-starter-test')
+	}
 
 
 eclipse {
@@ -50,4 +57,5 @@ eclipse {
 
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.12'
+}
 }
