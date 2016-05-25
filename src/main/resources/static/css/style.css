@@ -188,7 +188,7 @@ th {
 #pageheader {
     position: relative;
     top: 0;
-    background-color: #141414;
+    background: linear-gradient(197deg, #141414, #58544a);;
 }
 
 footer a {
