@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @ComponentScan
 public class WebController {
-
+    // if index.html is in static content a RequestMapping is redundent
     @RequestMapping("/")
     public String startPage(){
          return "index";

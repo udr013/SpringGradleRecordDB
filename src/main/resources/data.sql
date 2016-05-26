@@ -1,6 +1,6 @@
 DROP SCHEMA IF EXISTS `test2`;
 CREATE SCHEMA IF NOT EXISTS `test2` /*!40100 DEFAULT CHARACTER SET utf8 */;
-use 'test';
+
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

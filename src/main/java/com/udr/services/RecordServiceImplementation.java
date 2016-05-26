@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 import java.util.Collection;
 
 @Service
-@Transactional
+@Transactional //deze annotatie zorgt voor  implementatie van rollback
 public class RecordServiceImplementation implements RecordServiceInterface {
 
 
