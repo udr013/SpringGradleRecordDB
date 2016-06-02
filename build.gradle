@@ -6,14 +6,25 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+
 	}
+}
+
+plugins {
+	id "org.sonarqube" version "2.0.1"
+	id "net.saliman.cobertura" version "2.3.2"
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 apply plugin: 'war'
+apply plugin: 'project-report'
+apply plugin: 'net.saliman.cobertura'
+apply plugin: 'checkstyle'
+//apply plugin: "org.sonarqube" //this plugin needs connection to a database
+//apply plugin: "sonar"
 
 jar {
 	baseName = 'springgradlerecorddb'
@@ -28,12 +39,12 @@ targetCompatibility = 1.8
 repositories {
 	mavenCentral()
 }
-
-development {
-	dataSource {
-		dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-		url = "jdbc:h2:~/cool;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-	}
+//
+//development {
+//	dataSource {
+//		dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+//		url = "jdbc:h2:~/cool;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+//	}
 
 
 	dependencies {
@@ -56,7 +67,7 @@ development {
 		}
 	}
 
+
 	task wrapper(type: Wrapper) {
 		gradleVersion = '2.12'
 	}
-}

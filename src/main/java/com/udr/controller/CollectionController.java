@@ -32,7 +32,7 @@ public class CollectionController {
 //    public void setRecordServiceInterface(RecordServiceInterface recordServiceInterface) {
 //        this.recordServiceInterface = recordServiceInterface;
 //    }
-    static ArrayList<Record> sortRecords;
+    ArrayList<Record> sortRecords;
     private User currentUser;
 
     @RequestMapping("/completeCollection")
