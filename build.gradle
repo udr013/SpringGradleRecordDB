@@ -22,7 +22,7 @@ apply plugin: 'spring-boot'
 apply plugin: 'war'
 apply plugin: 'project-report'
 apply plugin: 'net.saliman.cobertura'
-apply plugin: 'checkstyle'
+//apply plugin: 'checkstyle'
 //apply plugin: "org.sonarqube" //this plugin needs connection to a database
 //apply plugin: "sonar"
 
