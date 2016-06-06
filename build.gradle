@@ -22,7 +22,7 @@ apply plugin: 'spring-boot'
 apply plugin: 'war'
 apply plugin: 'project-report'
 apply plugin: 'net.saliman.cobertura'
-apply plugin: 'checkstyle'
+//apply plugin: 'checkstyle'
 //apply plugin: "org.sonarqube" //this plugin needs connection to a database
 //apply plugin: "sonar"
 
@@ -59,10 +59,6 @@ repositories {
 		testCompile('org.springframework.boot:spring-boot-starter-test')
 	}
 
-checkstyle {
-	ignoreFailures = true
-	configFile = file("C:/Program Files (x86)/jenkins/scripts/checks.xml")
-}
 
 	eclipse {
 		classpath {
