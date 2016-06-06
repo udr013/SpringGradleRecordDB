@@ -63,7 +63,7 @@ public class RecordServiceImplementation implements RecordServiceInterface {
 
 	@Override
 	public Collection<Record> findByArtistAndIdusers(String name, int id) {
-		Iterable<Record> itr = recordRepository.findByArtistAndIdusers(name, id);
+		Iterable<Record> itr = recordRepository.findByArtistContainingIgnoreCaseAndIdusers(name, id);
 		return (Collection<Record>)itr;
 	}
 

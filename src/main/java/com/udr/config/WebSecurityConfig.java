@@ -37,15 +37,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout().permitAll();
 
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
+//        http.csrf().disable();
+//        http.headers().frameOptions().disable();
     }
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         System.out.println("we are here");
         authenticationManagerBuilder.jdbcAuthentication().dataSource(driverManagerDataSource)
-
                 //.usersByUsernameQuery("select username, password enabled from users where username=?")
                 .authoritiesByUsernameQuery("select username, password enabled from users where username=?")//validate user by username and password and user is enabled to access
         ;

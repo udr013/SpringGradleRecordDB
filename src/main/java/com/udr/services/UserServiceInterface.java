@@ -12,4 +12,5 @@ public interface UserServiceInterface {
     public User findUser(Integer id);
     public Collection<User> getAllUsers();
     public User findByName(String name);
+    public User findByEmail(String email);
 }

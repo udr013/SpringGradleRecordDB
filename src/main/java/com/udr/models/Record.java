@@ -1,12 +1,18 @@
 package com.udr.models;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.persistence.*;
 import java.sql.Date;
+
 
 @Entity
 @Table(name = "records")
 public class Record {
+
+    private static final Logger log = LoggerFactory.getLogger(Record.class);
 
     @ManyToOne
     @JoinColumn(name = "idusers", insertable = false, updatable = false)
