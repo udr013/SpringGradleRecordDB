@@ -33,7 +33,11 @@ public class CollectionController {
 //    public void setRecordServiceInterface(RecordServiceInterface recordServiceInterface) {
 //        this.recordServiceInterface = recordServiceInterface;
 //    }
+    
+    // only read only list (besides the viewCollection) but might be tricky to have this here
     private ArrayList<Record> sortRecords;
+    
+    // might be trick to have this instance var
     private User currentUser;
 
     @RequestMapping("/completeCollection")
