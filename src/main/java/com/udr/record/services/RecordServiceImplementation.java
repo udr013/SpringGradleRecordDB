@@ -1,8 +1,9 @@
-package com.udr.services;
+package com.udr.record.services;
 
 
-import com.udr.models.Record;
-import com.udr.repositories.RecordRepository;
+import com.udr.record.domain.Record;
+import com.udr.record.repositories.RecordRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

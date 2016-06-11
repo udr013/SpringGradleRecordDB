@@ -1,7 +1,8 @@
-package com.udr.repositories;
+package com.udr.record.repositories;
 
-import com.udr.models.Record;
 import org.springframework.data.repository.CrudRepository;
+
+import com.udr.record.domain.Record;
 
 import java.util.Collection;
 

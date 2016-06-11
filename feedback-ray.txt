@@ -1,0 +1,6 @@
+Prima werk
+
+Security al goed ingericht
+
+Sommige uitgecommentarieerde @ResponseBody is bedoelt voor RestControllers maar dat had je vast al gezien :-)
+

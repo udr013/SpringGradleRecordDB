@@ -1,8 +1,8 @@
-package com.udr.services;
-
-import com.udr.models.Record;
+package com.udr.record.services;
 
 import java.util.Collection;
+
+import com.udr.record.domain.Record;
 
 public interface RecordServiceInterface {
 

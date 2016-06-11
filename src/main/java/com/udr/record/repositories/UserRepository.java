@@ -1,7 +1,8 @@
-package com.udr.repositories;
+package com.udr.record.repositories;
 
-import com.udr.models.User;
 import org.springframework.data.repository.CrudRepository;
+
+import com.udr.record.domain.User;
 
 /**
  * Created by udr013 on 11-5-2016.

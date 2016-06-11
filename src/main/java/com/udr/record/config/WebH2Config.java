@@ -1,4 +1,4 @@
-package com.udr.config;
+package com.udr.record.config;
 
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;

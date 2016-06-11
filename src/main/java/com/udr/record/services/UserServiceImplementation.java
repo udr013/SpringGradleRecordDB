@@ -1,7 +1,8 @@
-package com.udr.services;
+package com.udr.record.services;
 
-import com.udr.models.User;
-import com.udr.repositories.UserRepository;
+import com.udr.record.domain.User;
+import com.udr.record.repositories.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

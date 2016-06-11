@@ -1,4 +1,4 @@
-package com.udr.config;
+package com.udr.record.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

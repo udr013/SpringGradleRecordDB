@@ -1,8 +1,8 @@
-package com.udr.services;
-
-import com.udr.models.User;
+package com.udr.record.services;
 
 import java.util.Collection;
+
+import com.udr.record.domain.User;
 
 public interface UserServiceInterface {
 

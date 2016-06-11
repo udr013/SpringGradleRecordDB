@@ -1,10 +1,11 @@
-package com.udr.controller;
+package com.udr.record.controller;
 
-import com.udr.compare.*;
-import com.udr.models.Record;
-import com.udr.models.User;
-import com.udr.services.RecordServiceInterface;
-import com.udr.services.UserServiceInterface;
+import com.udr.record.compare.*;
+import com.udr.record.domain.Record;
+import com.udr.record.domain.User;
+import com.udr.record.services.RecordServiceInterface;
+import com.udr.record.services.UserServiceInterface;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package com.udr.models;
+package com.udr.record.domain;
 
 
 import org.slf4j.Logger;
