@@ -23,17 +23,17 @@ import java.util.Collections;
 public class CollectionController {
 
     @Autowired
-    RecordServiceInterface recordServiceInterface;
+    private RecordServiceInterface recordServiceInterface;
 
     @Autowired
-    UserServiceInterface userServiceInterface;
+    private UserServiceInterface userServiceInterface;
 
 
     //    @Autowired
 //    public void setRecordServiceInterface(RecordServiceInterface recordServiceInterface) {
 //        this.recordServiceInterface = recordServiceInterface;
 //    }
-    ArrayList<Record> sortRecords;
+    private ArrayList<Record> sortRecords;
     private User currentUser;
 
     @RequestMapping("/completeCollection")
