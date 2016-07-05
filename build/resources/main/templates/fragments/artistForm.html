@@ -1,0 +1,13 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+<form id="artistform" th:fragment="artistform" th:object="${record}" th:action="@{/getAllByArtist/{artist}(artist=${artist})}" action="#" method="get">
+    <label>Search records by artist:</label>
+    <input type="text" th:field="*{artist}" class="form-control" placeholder=" artist"/>
+    <input class="button" type="submit" value="Search"/>
+</form>
+</body>
+</html>

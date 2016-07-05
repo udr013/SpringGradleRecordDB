@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/style.css}"/>
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css}"/>
+
+<head>
+    <link rel="shortcut icon" th:href="@{images/recordworld.ico}"/>
+    <title>The Record Collector</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<article id="loginText">
+    <p>
+    <h3>Welcome, to access or create your database you need to login</h3>
+    The collection page allows you to create your own record database ,to keep track of your music collection. Here is an image
+how your database will look like. You will be able to sort the collection on any field or search on a particular artist to get an overview
+of only the records of that artist.<br/> If you didn't sign up already, follow the link to the:
+    <a th:href="@{/register}"> registration page.</a>
+</p>
+</article>
+
+
+<form id="loginForm" th:action="@{/login}" method="post">
+    <h3 id="loginHeader">Login or use the register button to get to the registration page.</h3>
+    <label> User Name : <input type="text" name="username"/> </label><br/>
+    <label> Password: <input type="password" name="password"/> </label><br/>
+    <p class="errormessage" th:if="${registered}">You can login using your new account</p>
+    <p class="errormessage" th:if="${param.logout}">You have been logged out.</p>
+    <p class="errormessage" th:if="${param.error}">Invalid username and/or password.</p>
+    <input class="button" type="submit" value="Sign In"/>
+    <button class="button" type="SUBMIT" href="#" th:action="@{/register}">Register</button><br/>
+
+</form>
+<footer>
+    <div th:replace="fragments/footer :: footer">
+
+    </div>
+</footer>
+</body>
+</html>
