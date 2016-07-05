@@ -1,0 +1,43 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/style.css}"/>
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css}"/>
+
+<head>
+    <link rel="shortcut icon" th:href="@{images/recordworld.ico}"/>
+    <title>The Record Collector</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<article id="loginText">
+    <p>
+    <h3>Welcome, to access or create your database sign-up</h3>
+    The collection page allows you to create your own record database ,to keep track of your music collection. Here is an image
+    how your database will look like. You will be able to sort the collection on any field or search on a particular artist to get an overview
+    of only the records of that artist.<br/> If you are already a subscribed user, follow the link to the:
+    <a th:href="@{/login}"> login page.</a>
+    </p>
+</article>
+
+
+<form id="regForm" th:object="${user}" th:action="@{/register/save}" action="#" method="post">
+    <h3 id="loginHeader">Fill out the form and start your own database.</h3>
+    <label> First Name : <input type="text" th:field="*{firstName}"/> </label><br/>
+    <label> Last Name : <input type="text" th:field="*{lastName}"/> </label><br/>
+    <p class="errormessage" th:if="${registerError}">username is already in use! Pick an other </p>
+    <label> User Name : <input type="text" th:field="*{userName}"/> </label><br/>
+    <p class="errormessage" th:if="${passwordError}">passwords don't match! </p>
+    <label> Password: <input type="password" th:field="*{password}" name="password"/> </label><br/>
+    <label> re-enter Password: <input type="password" th:field="*{confirmpassword}"/> </label><br/>
+    <label> Email address : <input type="email" th:field="*{email}" name="email"/> </label><br/>
+    <input class="button" type="submit" value="Submit"/>
+
+    <br/>
+</form>
+<footer>
+    <div th:replace="fragments/footer :: footer">
+
+    </div>
+</footer>
+</body>
+</html>

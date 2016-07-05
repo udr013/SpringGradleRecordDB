@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css}"/>
+    <link rel="shortcut icon" th:href="@{/images/recordworld.ico}"/>
+    <title>The Record Collector</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<div class="database_table" align="center">
+
+    <h2 class="overviewTitle">Artist albums overview:</h2>
+
+    <table th:replace="fragments/table :: table">
+    </table>
+    <button class="button"><a th:href="@{/completeCollection}">return to collection</a></button>
+</div>
+<footer>
+    <div th:replace="fragments/footer :: footer">
+
+    </div>
+</footer>
+
+</body>
+</html>

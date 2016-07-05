@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div id="pageheader" th:fragment="header">
+    <header>
+        <img th:src="@{/images/records.jpg}" alt="nice record image"/>
+        <h1>The Record Collector
+            <br/>
+            <h2>Keep track of your precious vinyl</h2>
+        </h1>
+    </header>
+    <br/>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#" th:href="@{/}">News</a></li>
+            <li><a href="#" th:href="@{/completeCollection}">Collection</a></li>
+            <li><a href="#" th:href="@{/about}"> About</a></li>
+            <li><a href="#" th:href="@{/contact}"> Contact</a></li>
+            <button class="button"><a href="#" th:href="@{/login}">Login</a></button> <button class="button"><a href="#" th:href="@{/logout}">Logout</a></button>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

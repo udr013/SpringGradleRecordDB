@@ -1,0 +1,313 @@
+@font-face {
+    font-family: Aerosol;
+    src: url('../fonts/Aerosol.ttf') format('truetype');
+}
+
+h1 {
+    color: #815a24;
+    font-size: 60px;
+    text-align: center;
+    font-family: Aerosol;
+}
+
+tbody{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+body {
+    margin: 0px;
+}
+
+#col-form {
+    width: 90%;
+}
+
+input, select, button {
+    margin-inside: 3px;
+    border-radius: 6px;
+    border-color: #815a24;
+    outline-color:#815a24;
+    -moz-outline-radius: 6px;
+}
+
+#artist #label {
+    width: 16%;
+}
+#format {
+    width: 12%;
+}
+
+#album {
+    width: 32%;
+}
+
+#year {
+    width: 12%;
+}
+
+#price {
+    width: 7%;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #242323;
+    border: 2px groove #815a24;
+    width: 80%;
+    align-content: center;
+    margin-bottom: 55px;
+}
+
+table > tr {
+    margin-left: 10px;
+    border: 2px groove #815a24;
+}
+th{
+    background-color: #242323;
+}
+tr:nth-child(odd){
+    background-color: #272727;
+}
+
+td.artist {
+    padding-left: 10px;
+}
+
+th#artist {
+    padding-left: 10px;
+}
+
+ table th  {
+     font-size: 1.5em;
+    color: #815a24;
+}
+#pricefield>span{
+    float: right;
+}
+.button {
+    color: #815a24;
+    background-color: #111111;
+}
+
+.button a{
+    color: #815a24;
+    text-decoration: none;
+}
+
+
+
+form {
+    margin: 2%;
+}
+
+h2 {
+    text-align: center;
+    color: #c7c7c7;
+    font-family: Aerosol;
+}
+
+#clips > article {
+
+    margin: 20px;
+    border: 2px groove #815a24;
+    min-height: 210px;
+}
+
+article h3 {
+    color: #815a24;
+}
+
+p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#clips {
+    float: left;
+    width: 83%;
+    margin-bottom: 55px;
+}
+
+aside {
+    margin: 24px 20px 20px 0px;
+    border: 2px groove #815a24;
+    width: 15%;
+    border-radius: 8px;
+    float: right;
+}
+
+aside > article {
+    padding: 10px;
+}
+
+iframe {
+
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+th {
+    text-align: left;
+    font-family: Aerosol;
+    font-size: 1.5em;
+}
+
+#loginText{
+    width: 80%;
+    margin-left: 10%;
+}
+#loginHeader{
+    color:#815a24;
+}
+#loginText a{
+    color: #815a24;
+    text-decoration: none;
+}
+
+#loginForm, #regForm{
+    padding:20px 10px;
+    margin: 0px 15% 60px 15%;
+    border:solid 2px #815a24;
+    border-radius: 6px;
+}
+
+.errormessage{
+    color: red;
+}
+
+#overviewTitle {
+    font-size: 2em;
+}
+
+#footer {
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /*height:60px;    Height of the footer */
+    background: #141414;
+}
+
+#pageheader {
+    position: relative;
+    top: 0;
+    background: linear-gradient(197deg, #141414, #58544a);;
+}
+
+footer a {
+    color: #815a24;
+    text-decoration: none;
+    margin-left: 10px;
+    font-stretch: ultra-expanded;
+}
+
+td a {
+    text-decoration: none;
+}
+
+i {
+    color: #815a24;
+}
+
+footer span {
+    color: #888888;
+}
+
+body {
+    color: #ffffff;
+    background-color: #303030;
+}
+
+input {
+    margin: 10px;
+}
+
+header h1 {
+
+    margin: 0px;
+    padding-top: 10px;
+}
+
+header h2 {
+    color: #969696;
+    font-size: 30px;
+    margin: 6px;
+
+}
+
+header img {
+    float: left;
+    margin: 20px 30px;;
+    border: 4px outset #815a24;
+
+    /*<!--width: 25%;-->*/
+}
+
+#navbar ul li {
+    display: inline-block;
+    padding: 0px 5%;
+}
+
+#navbar ul li a {
+    text-decoration: none; /*removes the underlining from the link*/
+    color: #888888;
+    font-size: 1.5em;
+}
+
+#navbar ul li a:hover {
+    background: #242323;
+    /*padding: 2px 2%;*/
+}
+
+#navbar {
+    align-content: center;
+    background-color: #111111;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #815a24 transparent;
+}
+th p{
+    margin:2px;
+}
+
+#aboutContent div{
+    margin: 20px 5% 55px 5%;
+    padding: 10px;
+    border: 2px solid #815a24;
+    border-radius: 6px;
+
+}
+#aboutContent li {
+    margin-left: 10%;
+}
+
+#aboutContent label {
+    font-size: 1.5em;
+    color: #815a24;
+}
+#aboutContent h2 {
+    font-family: Aerosol;
+    color: #c7c7c7;
+}
+#aboutContent a {
+    color: #815a24;
+}
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        display: block;
+        width: 100%
+    }
+
+    aside {
+        margin: 10px;
+        width: auto;
+    }
+
+    #clips {
+        float: left;
+        width: 100%;
+        margin: 10px 10px 55px;
+    }
+}

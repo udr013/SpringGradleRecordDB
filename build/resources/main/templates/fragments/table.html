@@ -1,0 +1,47 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+<table id="table" th:border="1" th:fragment="table">
+    <caption>Collection overview</caption>
+    <thead>
+    <tr>
+        <th th:class="artist" id="artist">Artist<span><p><a th:href="@{/sortCollection/artist}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/artist/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="album">Album<span><p><a th:href="@{/sortCollection/album}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/album/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="year">Year<span><p><a th:href="@{/sortCollection/year}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/year/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="label">Label<span><p><a th:href="@{/sortCollection/label}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/label/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="format">Format<span><p><a th:href="@{/sortCollection/format}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/format/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+        <th id="price">Price<span><p><a th:href="@{/sortCollection/price}"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            <a th:href="@{/sortCollection/price/reverse}"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p></span></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:if="${#lists.isEmpty(allRecords)}" >
+        <td colspan="5" align="center">No Records in your collection yet!!!</td>
+    </tr>
+    <tr th:each="record : ${allRecords}">
+        <td th:class="artist" th:text="${record.artist}"></td>
+        <td th:text="${record.album}"></td>
+        <td th:text="${record.getdate_of_release()}"></td>
+        <td th:text="${record.label}"></td>
+        <td th:text="${record.format}"></td>
+        <!-- Set minimum integer digits and (exact) decimal digits-->
+        <td id="pricefield">€ <span th:text="${#numbers.formatDecimal(record.price,1,2)}"/></td>
+        <td>
+            <a th:href="@{/delete/{id}(id=${record.id})}">&emsp;&emsp;<span><i class="fa fa-close fa-lg" aria-hidden="true"></i>&emsp;</span></a>
+            <a th:href="@{/update/{id}(id=${record.id})}"><span><i class="fa fa-edit fa-lg" aria-hidden="true"></i></span></a>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>
