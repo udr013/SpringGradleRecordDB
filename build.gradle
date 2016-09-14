@@ -19,7 +19,7 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
-apply plugin: 'war'
+apply plugin: 'jar'
 apply plugin: 'project-report'
 apply plugin: 'net.saliman.cobertura'
 //apply plugin: 'checkstyle'
@@ -80,7 +80,7 @@ tasks.stage.doLast() {
 	delete fileTree(dir: "build/distributions")
 	delete fileTree(dir: "build/libs", exclude: "*.war")
 }
-war.mustRunAfter clean
+jar.mustRunAfter clean
 
 task copyToLib(type: Copy) {
 	into "$buildDir/server"
