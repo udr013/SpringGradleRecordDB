@@ -26,7 +26,7 @@ apply plugin: 'net.saliman.cobertura'
 //apply plugin: "org.sonarqube" //this plugin needs connection to a database
 //apply plugin: "sonar"
 
-jar {
+fatJar {
 	baseName = 'springgradlerecorddb'
 	version = '0.0.1-SNAPSHOT'
 	manifest{
