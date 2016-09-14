@@ -1,1 +1,1 @@
-web: java
+web: java -Dserver.port=$PORT -jar target/springgradlerecorddb-0.0.1-SNAPSHOT.jar
