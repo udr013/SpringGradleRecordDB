@@ -28,7 +28,16 @@ mainClassName = 'com.udr.SpringGradleRecordDbApplication'
 //apply plugin: 'checkstyle'
 //apply plugin: "org.sonarqube" //this plugin needs connection to a database
 //apply plugin: "sonar"
-
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': version = 'fat-SNAPSHOT' ,
+                'Main-Class': "com.udr.SpringGradleRecordDbApplication"
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
 jar {
 	baseName = 'springgradlerecorddb'
 	version = '0.0.1-SNAPSHOT'
