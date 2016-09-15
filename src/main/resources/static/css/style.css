@@ -94,6 +94,11 @@ th#artist {
     text-decoration: none;
 }
 
+a{
+    color: #815a24;
+    text-decoration: none;
+}
+
 
 
 form {
@@ -242,7 +247,7 @@ header img {
 
 #navbar ul li {
     display: inline-block;
-    padding: 0px 5%;
+    padding: 0px 3%;
 }
 
 #navbar ul li a {
