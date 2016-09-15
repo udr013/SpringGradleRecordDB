@@ -20,15 +20,15 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 //        driverManagerDataSource.setPassword("style-73");
 
 
-//        driverManagerDataSource.setDriverClassName("org.h2.Driver");
-//        driverManagerDataSource.setUrl("jdbc:h2:~/test2");
-//        driverManagerDataSource.setUsername("sa");
-//        driverManagerDataSource.setPassword("");
+        driverManagerDataSource.setDriverClassName("org.h2.Driver");
+        driverManagerDataSource.setUrl("jdbc:h2:~/test2");
+        driverManagerDataSource.setUsername("sa");
+        driverManagerDataSource.setPassword("");
 
-        driverManagerDataSource.setDriverClassName("org.postgresql.Driver");
-        driverManagerDataSource.setUrl("jdbc:h2:ec2-54-83-44-229.compute-1.amazonaws.com/dcjvcrnkm4bj5n");
-        driverManagerDataSource.setUsername("vieipbvzpwytjl");
-        driverManagerDataSource.setPassword("Xs2D0Tim02pa7xk0j14z4CdNty");
+//        driverManagerDataSource.setDriverClassName("org.postgresql.Driver");
+//        driverManagerDataSource.setUrl("jdbc:h2:ec2-54-83-44-229.compute-1.amazonaws.com/dcjvcrnkm4bj5n");
+//        driverManagerDataSource.setUsername("vieipbvzpwytjl");
+//        driverManagerDataSource.setPassword("Xs2D0Tim02pa7xk0j14z4CdNty");
 
         return driverManagerDataSource;
     }
