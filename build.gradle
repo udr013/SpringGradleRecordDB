@@ -29,7 +29,7 @@ mainClassName = 'com.udr.SpringGradleRecordDbApplication'
 //apply plugin: "org.sonarqube" //this plugin needs connection to a database
 //apply plugin: "sonar"
 
-fatJar(Type:Jar) {
+jar {
 	baseName = 'springgradlerecorddb'
 	version = '0.0.1-SNAPSHOT'
 //	manifest{

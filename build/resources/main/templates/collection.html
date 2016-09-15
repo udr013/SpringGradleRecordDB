@@ -1,6 +1,6 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" th:href="@{/css/style.css}" href="/css/style.css"/>
+<link rel="stylesheet" th:href="@{/css/style.css}"/>
 <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css}"/>
 
 <head>
@@ -17,14 +17,13 @@
     </form>
 
     <form id="col-form" th:object="${record}" th:action="@{/record/save}" action="#" method="post">
-        <h3 th:content="*{artist}"></h3>
         <input type="text" th:field="*{artist}" class="form-control" placeholder=" artist"/>
 
-        <input type="" th:field="*{album}" class="form-control" placeholder=" album"/>
+        <input type="text" th:field="*{album}" class="form-control" placeholder=" album"/>
 
         <input type="date" th:field="*{date_of_release}" class="form-control" placeholder=" year"/>
 
-        <input type="" th:field="*{label}" class="form-control" placeholder=" label"/>
+        <input type="text" th:field="*{label}" class="form-control" placeholder=" label"/>
         <select type="text" th:field="*{format}" class="form-control">
             <option name="select" value="LP">LP</option>
             <option name="select" value="LP2">LP2</option>

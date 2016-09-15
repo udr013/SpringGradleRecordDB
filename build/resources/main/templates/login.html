@@ -19,16 +19,18 @@ of only the records of that artist.<br/> If you didn't sign up already, follow t
 </p>
 </article>
 
-
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
 <form id="loginForm" th:action="@{/login}" method="post">
     <h3 id="loginHeader">Login or use the register button to get to the registration page.</h3>
     <label> User Name : <input type="text" name="username"/> </label><br/>
     <label> Password: <input type="password" name="password"/> </label><br/>
-    <p class="errormessage" th:if="${registered}">You can login using your new account</p>
-    <p class="errormessage" th:if="${param.logout}">You have been logged out.</p>
-    <p class="errormessage" th:if="${param.error}">Invalid username and/or password.</p>
     <input class="button" type="submit" value="Sign In"/>
-    <button class="button" type="SUBMIT" href="#" th:action="@{/register}">Register</button><br/>
+    <button class="button"><a href="#" th:href="@{/register}">Register</a></button><br/>
 
 </form>
 <footer>

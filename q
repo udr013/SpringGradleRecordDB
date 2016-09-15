@@ -1,0 +1,363 @@
+[33mcommit 493b15afc55825bc5c8a189fbe15a4ac45cf409f[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu Sep 15 00:21:25 2016 +0200
+
+    test gradle
+
+[33mcommit 42b975e950f12d1e33fbe31a86879dc16fecba72[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu Sep 15 00:18:47 2016 +0200
+
+    test gradle
+
+[33mcommit 68e5f1a1e02ce29b226f041842f9d35062777524[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu Sep 15 00:12:37 2016 +0200
+
+    test gradle
+
+[33mcommit 35eceab32bbbe8803fd3d5f1d1e7fbc7256779b0[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed Sep 14 23:52:49 2016 +0200
+
+    test gradle
+
+[33mcommit 6911a468533aa4dc205b373c54e3c01128ca6f07[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed Sep 14 23:49:42 2016 +0200
+
+    Procfile
+
+[33mcommit 6873e28faa257c2b1e4dd0d6422353e8e83d8c7c[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed Sep 14 22:10:22 2016 +0200
+
+    removed postgres dependency
+
+[33mcommit 227d2bfb47748eae4e0f81f2bfb6b64e03a4fb90[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed Sep 14 22:08:46 2016 +0200
+
+    removed postgres dependency
+
+[33mcommit 41aa55b3bcdcf5341afe9b1bfd40c666431d2ef6[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed Sep 14 21:59:16 2016 +0200
+
+    removed postgres dependency
+
+[33mcommit 60f0ae6c74e89b66a590ec4fa944b02f814ac090[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue Jul 5 21:10:19 2016 +0200
+
+    driversource
+
+[33mcommit 6db60fdd45f20d3cd167b77460cfc1c2533a4250[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue Jul 5 18:09:15 2016 +0200
+
+    updated for heroku
+
+[33mcommit 264c49adafe52a08c401c416a3a79d46ca5d5dda[m
+Merge: 5f09b74 6213e0c
+Author: udr013 <udr013@gmail.com>
+Date:   Tue Jul 5 18:04:23 2016 +0200
+
+    Merge remote-tracking branch 'origin/master' into develop
+
+[33mcommit 5f09b741dea301723a5d9588a7618e9404faa81f[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue Jul 5 18:04:07 2016 +0200
+
+    build.gradle updated for heroku
+
+[33mcommit 6213e0c5da4c5e333995ee34893e61769236b03b[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue Jul 5 18:00:31 2016 +0200
+
+    some update login register
+
+[33mcommit 8f93cde8280feef213bf12c1fd5d94776f605074[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue Jul 5 17:54:11 2016 +0200
+
+    merge develop
+
+[33mcommit bfa28bc36a5ba88ac8e628a052dde058d2f64e73[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue Jul 5 17:43:36 2016 +0200
+
+    Add Heroku generated app.json
+
+[33mcommit 93b26b763deffca30c33c0f058ea0ca5d30c0ea5[m
+Author: udr013 <udr013@gmail.com>
+Date:   Mon Jun 6 14:30:42 2016 +0200
+
+    revert previous commit
+
+[33mcommit 4326a357890cf3ead43f3eb8449f900983b442af[m
+Author: udr013 <udr013@gmail.com>
+Date:   Mon Jun 6 14:23:53 2016 +0200
+
+    checkstyle configured?
+
+[33mcommit 6fe18758b452a94e7c3815ad04bfaca3d2090b5f[m
+Author: udr013 <udr013@gmail.com>
+Date:   Mon Jun 6 14:18:14 2016 +0200
+
+    command out checkstyle in build.gradle
+
+[33mcommit 98bec59fc252d05f6662183d59a24d25cbe1ac6f[m
+Author: udr013 <udr013@gmail.com>
+Date:   Mon Jun 6 10:48:04 2016 +0200
+
+    improved search function, "ContainingIgnoreCase"
+
+[33mcommit f341eb7577b2adb1d6b9bd2265953a51ad1cbbdc[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu Jun 2 12:09:00 2016 +0200
+
+    minor bug fixes based on find Bugs tool
+
+[33mcommit a01ef077338cafd58ee5f7136089e9fe2269b3bd[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu May 26 16:47:11 2016 +0200
+
+    running now wth h2 in mem database
+    added actuater to dependencies
+
+[33mcommit fda3f946455113af30d09f2aea6cf77bfdb7569d[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed May 25 15:28:12 2016 +0200
+
+    running now wth h2 in mem database
+    added actuater to dependencies
+
+[33mcommit 1aa8b8b318127265bf050b14e0b0b4017e4f5bd4[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue May 17 14:34:49 2016 +0200
+
+    bug fixes and database.sql added
+
+[33mcommit 9e547b3a1c8f4375ccd00988232edf974c3f8f93[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue May 17 14:01:23 2016 +0200
+
+    bug fixes and database.sql added
+
+[33mcommit cf19b4013f034958fbf108d0810b0de8741c71a5[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sun May 15 19:32:55 2016 +0200
+
+    findByArtistAndIdusers and fixed some pageloading bugs
+
+[33mcommit e367a2d333b2c28c78f62765746e067c7efb8278[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sun May 15 17:06:31 2016 +0200
+
+    records are flagged with userid and record database gets readout for users individually
+
+[33mcommit c110584982957e91e3a1c55b060ab1830360dac2[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sat May 14 01:35:21 2016 +0200
+
+    new user can register himself to get an account
+
+[33mcommit ea762515f1c746ccd877017d67131bcbab6fcd09[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri May 13 22:58:30 2016 +0200
+
+    user verification with mySQL database added: MvcConfig, WebSecurityConfig
+
+[33mcommit 8392e737b65402697ec8c9e316076979e294bccd[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri May 13 12:06:17 2016 +0200
+
+    user getters/setters
+
+[33mcommit 22e23ca9b01f3cf4c03a7677e499a4d6fbd77024[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri May 13 12:05:11 2016 +0200
+
+    user getters/setters
+
+[33mcommit 53a1c887b26129ab6c57311e5e9e6949b9a61156[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri May 13 10:58:03 2016 +0200
+
+    added user, register.html
+
+[33mcommit 3f9fbe8b2cb86755626d2aa77f74c35967d424e8[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu May 12 18:54:38 2016 +0200
+
+    login  logout button in header, improved login page
+
+[33mcommit 48c9782122ef9b5cbce2ca3c59551c2826293f27[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu May 12 17:25:03 2016 +0200
+
+    spring security implemented, login page
+
+[33mcommit 37c576d56e1f63472d5e0bb7e2e055c6e4871ed7[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed May 11 16:13:54 2016 +0200
+
+    first implementation user model , sortController, artist sort
+
+[33mcommit d8796f3b08f287b346e183dc4fdb0a9120b5241b[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue May 10 18:02:05 2016 +0200
+
+    more css styling to table
+
+[33mcommit 808d83dc00ae23138d2505a94c9f989f80222828[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue May 10 09:35:16 2016 +0200
+
+    Implemented findByArtist
+
+[33mcommit 76db81800c7f0ce68bd99600f3aec8d69e6d8fdb[m
+Author: udr013 <udr013@gmail.com>
+Date:   Mon May 9 00:00:26 2016 +0200
+
+    fix link footer, clean up
+
+[33mcommit 88fc318efa37085fd12344fea1abeae062a9afaa[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed May 4 18:35:39 2016 +0200
+
+    all table columns sortable ascending and descending
+
+[33mcommit 637e5d917997c03a2196f91b877eca788f87d546[m
+Author: udr013 <udr013@gmail.com>
+Date:   Wed May 4 02:49:48 2016 +0200
+
+    added compare classes, styling etc
+
+[33mcommit b08a3284c7c9678a25f2368cf55c38ea6224c470[m
+Author: udr013 <udr013@gmail.com>
+Date:   Tue May 3 12:31:04 2016 +0200
+
+    styling form and table
+
+[33mcommit 036c515aa9d4d633770f430da3adc4145de67458[m
+Author: udr013 <udr013@gmail.com>
+Date:   Mon May 2 22:06:43 2016 +0200
+
+    initial content to news and awesome-fonts to collection.html
+
+[33mcommit 12ad313904f848682ca603ed5bc57286d077d16e[m
+Author: udr013 <udr013@gmail.com>
+Date:   Mon May 2 11:46:20 2016 +0200
+
+    apply plugin: 'war' added to build.gradle
+
+[33mcommit 667bbf564dcbdad5d2bec84d19f8725f67e9f44f[m
+Author: udr013 <udr013@gmail.com>
+Date:   Mon May 2 02:58:58 2016 +0200
+
+    update implemented
+
+[33mcommit 79cf59f5b5ff67cf9801fbba979625a085b61406[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sun May 1 23:29:25 2016 +0200
+
+    added update.html, partially working
+
+[33mcommit b4a5503d32559b3aecca6c6fcb27d703190cda9d[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sat Apr 30 20:02:50 2016 +0200
+
+    table fragment added
+
+[33mcommit 2b16e9aa87022ec97eadd8fdff0955951579aa5c[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sat Apr 30 19:37:24 2016 +0200
+
+    implemented delete records from DB
+
+[33mcommit fdae56440c47fbfb2ceb6974c61466c442794ebb[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sat Apr 30 15:01:37 2016 +0200
+
+    input fields now in collection.html
+    some layout adjustments
+
+[33mcommit aa0f57cbcc121aac66e176d0c7c9b0807e4baeb0[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sat Apr 30 01:51:20 2016 +0200
+
+    improved header styling, css
+
+[33mcommit a92c5bb91eb2883c053a349a1747c19b5b450a8f[m
+Author: udr013 <udr013@gmail.com>
+Date:   Sat Apr 30 00:46:28 2016 +0200
+
+    fixed header and footer layout, css
+
+[33mcommit bbeddf03d5d9bfb5d4ae9f4a0bc4621d7aa58478[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 22:56:25 2016 +0200
+
+    some styling
+
+[33mcommit 2b191b7995bfc0f9de354d4840ea6bac5598a44a[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 22:33:35 2016 +0200
+
+    footer fragment
+
+[33mcommit 508310d72213644c5e32d1175a81760205c008bb[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 19:19:48 2016 +0200
+
+    numberformat price in collection.html, images and font
+
+[33mcommit ce1ed93515d9017cbdd39876e1ec51fd49f94b91[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 18:39:02 2016 +0200
+
+    collection.html +css
+
+[33mcommit 4721056a30cd8610071ac16936c1e001ef9b4e9a[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 18:16:53 2016 +0200
+
+    collection.html edited
+
+[33mcommit 4aa787aee60f54be413c28fdb47f063a909f82f2[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 17:45:24 2016 +0200
+
+    collection overview implemented in collection.html and controller
+
+[33mcommit 50c1afd0a82e776b07b2227771d80a58029054c1[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 17:13:43 2016 +0200
+
+    images, favicon, some edits in templates
+
+[33mcommit 50fb73d43f79abd6be56c534661bb6db9834894c[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 13:46:44 2016 +0200
+
+    added header fragment, collection.html, some css
+
+[33mcommit 780b242e910fd41345e8ca0a8b6921929f389993[m
+Author: udr013 <udr013@gmail.com>
+Date:   Fri Apr 29 02:14:30 2016 +0200
+
+    added css and image
+
+[33mcommit ddaf61554f3e00773226e35bc3860a3f9b7dcb61[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu Apr 28 22:33:22 2016 +0200
+
+    renamed year_of_release to date_of_release and made it a date format in HTML form, Records , MySQL table
+
+[33mcommit c03c9cc59d820f3f04218a14a1cd8846f6e00131[m
+Author: udr013 <udr013@gmail.com>
+Date:   Thu Apr 28 21:16:57 2016 +0200
+
+    Initial commit, needs MySQL table records following Record class in Model package edit application.properties to establish connection

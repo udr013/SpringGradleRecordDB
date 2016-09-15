@@ -167,13 +167,9 @@ th {
 
 #loginForm, #regForm{
     padding:20px 10px;
-    margin: 0px 15% 60px 15%;
+    margin: 0px 15%;
     border:solid 2px #815a24;
     border-radius: 6px;
-}
-
-.errormessage{
-    color: red;
 }
 
 #overviewTitle {

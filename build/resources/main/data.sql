@@ -2,6 +2,25 @@ DROP SCHEMA IF EXISTS `test2`;
 CREATE SCHEMA IF NOT EXISTS `test2` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
 
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `idusers` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `enabled` INT(4) DEFAULT '1',
+  PRIMARY KEY (`idusers`)
+) ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` VALUES (0,'dummy','dummy','dummy@dummy.nl',1),(1,'mark','test','udr013@gmail.com',1),(2,'sas','sas','sas@sas.sa',1);/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
+
 
 --
 --  Table structure for table `records`
