@@ -170,3 +170,5 @@ $RECYCLE.BIN/
 src/main/webapp/
 /.idea/modules/SpringGradleRecordDB.iml
 /.idea/workspace.xml
+/.idea/
+/gradle/
