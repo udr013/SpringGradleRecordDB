@@ -1,6 +1,6 @@
 .gradle/
 .idea/
-.idea/*
+.idea/workspace.xml
 build/
 src/main/webapp/
 blabla
