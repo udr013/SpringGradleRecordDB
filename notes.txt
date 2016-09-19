@@ -1,0 +1,3 @@
+To make a proper build on heroku:
+gradle folder containing the gradle-wrapper.jar needs to be included
+Procfile needs to contain the app specification, web and port and the correct path to the Fatjar
