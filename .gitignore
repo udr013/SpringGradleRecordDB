@@ -168,3 +168,5 @@ $RECYCLE.BIN/
 .idea/encodings.xml
 .idea/runConfigurations.xml
 src/main/webapp/
+/.idea/modules/SpringGradleRecordDB.iml
+/.idea/workspace.xml
