@@ -29,6 +29,7 @@ mainClassName = 'com.udr.SpringGradleRecordDbApplication'
 //apply plugin: "org.sonarqube" //this plugin needs connection to a database
 //apply plugin: "sonar"
 task fatJar(type: Jar) {
+	dependsOn clean
 //    manifest {
 //        attributes 'Implementation-Title': 'Gradle Jar File Example',
 //                'Implementation-Version': version = 'fat-SNAPSHOT' ,
@@ -84,7 +85,7 @@ dependencies {
 //		gradleVersion = '2.12'
 //	}
 //task stage() {
-//	dependsOn clean, war
+//	dependsOn clean
 //}
 //tasks.stage.doLast() {
 //	delete fileTree(dir: "build/distributions")
