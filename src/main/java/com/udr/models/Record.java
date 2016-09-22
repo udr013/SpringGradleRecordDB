@@ -5,12 +5,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 
 @Entity
 @Table(name = "records")
-public class Record {
+public class Record  implements Serializable{
+
+    private static final long  serialVersionID =58613706;
+
 
     private static final Logger log = LoggerFactory.getLogger(Record.class);
 
