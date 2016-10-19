@@ -35,7 +35,7 @@
         <input type="number" step="0.01" th:field="*{price}" class="form-control" placeholder=" price"/>
         <!--use id & name instead of field to set default value!!-->
         <input type="hidden" th:id="*{idusers}" name="idusers" th:value="${currentuser.id}" class="form-control" placeholder=" label"/>
-        <input class="button" type="submit" value="Submit"/>
+        <input class="button" id="submit" type="submit" value="Submit"/>
     </form>
     <table th:replace="fragments/table :: table">
     </table>

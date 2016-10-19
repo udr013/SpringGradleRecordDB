@@ -7,7 +7,7 @@
 <form id="artistform" th:fragment="artistform" th:object="${record}" th:action="@{/getAllByArtist/{artist}(artist=${artist})}" action="#" method="get">
     <label>Search records by artist:</label>
     <input type="text" th:field="*{artist}" class="form-control" placeholder=" artist"/>
-    <input class="button" type="submit" value="Search"/>
+    <input class="button" id="search" type="submit" value="Search"/>
 </form>
 </body>
 </html>
